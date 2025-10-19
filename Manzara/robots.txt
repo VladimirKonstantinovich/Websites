@@ -1,0 +1,4 @@
+User-agent:*
+	Allow: /*.css
+	Allow: /*.js
+	Sitemap: https://manzara-hotel.ru/sitemap.xml

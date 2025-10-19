@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Уютный гостевой дом в Керчи с видом на море | Калинина 10</title>
+    <meta name="description" content="Вас ждут уютные номера, из которых открывается красивый вид на море. Здесь вы сможете комфортно отдохнуть всей семьёй, сходить на пляж, поездить по многим местам. И мы сделаем всё, чтобы вам у нас понравилось!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="svg-images/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="script.js" defer></script>
+    <script src="nomera-swiper.js" defer></script>
+    <script src="contacts.js" defer></script>
+    <script src="ymaps.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+           emailjs.init("dtwDAJ1JKwgjbp3WI");
+        })();
+     </script>
+</head> 
+<body>
+    <header>
+        <div class="header-image">
+            <img src="luxury-one-room/luxury.webp" alt="Гостевой дом в Керчи">
+        </div>
+        <div class="header-text">
+            <h1>Отдохните в уютном гостевом доме в Керчи</h1>
+            <p>
+                В номерах есть всё необходимое для полноценного отдыха. 
+                Рядом пляж и красивый парк, а также много других интересных мест.
+            </p>
+
+            <div class="contacts-header">
+                <div class="contacts-phone">
+                    <img src="svg-images/phone.svg" alt="">
+                    <a href="tel: +79781182125"> +7 (978) 118-21-25</a>
+                </div>
+                <a class="whatsup" href="https://wa.me/+79781182125" target="_blank">Написать в What's up</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="benefits">
+            <div class="benefit">
+                <h2>С видом на море</h2>
+                <img src="luxury-one-room/luxury-4.webp" alt="">
+            </div>
+
+            <div class="benefit">
+                <h2>Комфортные номера</h2>
+                <img src="luxury-one-room/luxury-3.webp" alt="">
+            </div>
+
+            <div class="benefit">
+                <h2>Бесплатная парковка</h2>
+                <img src="luxury-one-room/luxury-7.webp" alt="">
+            </div>
+        </section>
+
+        <section class="nomera">
+            <h2>Наши номера</h2>
+            <div class="nomera-wrapper">
+                <div class="nomer">
+                    <div class="nomer-swiper">
+                        <div class="swiper-wrapper">
+                
+                            <div class="swiper-slide">
+                                <img src="luxury-two-rooms/luxury.webp" alt="">
+                            </div>
+                        
+                            <div class="swiper-slide">
+                                <img src="luxury-two-rooms/luxury-2.webp" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="luxury-two-rooms/luxury-3.webp" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="luxury-two-rooms/luxury-4.webp" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="luxury-two-rooms/luxury-5.webp" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="luxury-two-rooms/luxury-6.webp" alt="">
+                            </div>
+                 
+                            <div class="swiper-slide">
+                                <img src="luxury-two-rooms/luxury-7.webp" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="luxury-two-rooms/luxury-8.webp" alt="">
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    
+                    </div>
+                    
+                    <div class="nomer-description">
+                        <h3>Люкс двухкомнатный</h3>
+                        <div class="additional-info-container">
+                            <div class="additional-info">
+                                <div class="room-space">
+                                    <img src="svg-images/maximize1.png" alt="">
+                                    <p>30 кв.м.</p>
+                                </div>
+                                <div class="room-descriptive-images">
+                                    <span class="tooltip" data-tooltip="Кандиционер"><img src="svg-images/snowflake.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Утюг"><img src="svg-images/iron.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Шкаф/Гардероб"><img src="svg-images/cabinet-drawer.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Постельное бельё"><img src="svg-images/pillows.png" alt=""></span>
+                                </div>
+                            </div>
+                            <div class="room-price">
+                                <p>от 3700 Р/Сутки</p>
+                            </div>
+                            <div class="more-info">
+                                <div class="content-header">
+                                    <p>Подробнее</p>
+                                    <img src="svg-images/greater-than-symbol.png" alt="">
+                                </div>
+                                <div class="more-info-description">
+                                    <p>
+                                        Номер состоит из двух комнат и санузла. Первая комната отдельная, не проходная, имеет большую двуспальную кровать с встроенным шкафом, прикроватными тумбочками и телевизором. Вторая комната проходная, с раздвижным диваном на двоих человек и с кухонной зоной. 
+                                        Имеется вся необходимая техника и посуда для приготовления пищи. Везде мансардные окна. Санузел состоит из туалета и ванной. Из номера открывается вид на море и Крымский мост. Максимальное количество гостей - 5.
+                                    </p>
+                                    <div class="room-information">
+                                        <div class="room-information-header">
+                                            <img src="svg-images/bedroom.png" alt="">
+                                            <h4>Оснащене номера и мебель:</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Площадь 30 кв.м</li>
+                                            <li>Кондиционирование/Система климат-контроля</li>
+                                            <li>Утюг</li>
+                                            <li>Шкаф/Гардероб</li>
+                                            <li>Дополнительные подушки и одеяла</li>
+                                            <li>Москитная сетка</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="room-information">
+                                        <div class="room-information-header">
+                                            <img src="svg-images/bath.png" alt="">
+                                            <h4>Ванная комната:</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Собственный санузел</li>
+                                            <li>Тапочки</li>
+                                            <li>Ванна</li>
+                                            <li>Фен</li>
+                                            <li>Стиральная машина</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="room-information">
+                                        <div class="room-information-header">
+                                            <img src="svg-images/fridge.png" alt="">
+                                            <h4>Кухня:</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Всё необходимое для приготовленя еды</li>
+                                            <li>Микроволновка</li>
+                                            <li>Холодильник</li>
+                                            <li>Столовые приборы</li>
+                                            <li>Обеденный стол</li>
+                                            <li>Кофе/Чай</li>
+                                            <li>Чайник</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="room-information">
+                                        <div class="room-information-header">
+                                            <img src="svg-images/tv.png" alt="">
+                                            <h4>Электроника и развлечения:</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Телевизор</li>
+                                            <li>Спутниковое ТВ</li>
+                                            <li>WiFi</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="room-information">
+                                        <div class="room-information-header">
+                                            <img src="svg-images/water-waves.png" alt="">
+                                            <h4>Вид:</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Вид на море</li>
+                                            <li>Вид на город</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="content-footer">
+                                        <p>Скрыть описание</p>
+                                        <img src="svg-images/greater-than-symbol.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nomer">
+                    <div class="nomer-swiper">
+                        <div class="swiper-wrapper">
+                
+                            <div class="swiper-slide">
+                                <img src="luxury-one-room/luxury.webp" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="luxury-one-room/luxury-2.webp" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="luxury-one-room/luxury-3.webp" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="luxury-one-room/luxury-4.webp" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="luxury-one-room/luxury-5.webp" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="luxury-one-room/luxury-6.webp" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="luxury-one-room/luxury-7.webp" alt="">
+                            </div>
+        
+                            <div class="swiper-slide">
+                                <img src="luxury-one-room/luxury-8.webp" alt="">
+                            </div>
+
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    
+                    </div>
+
+                    <div class="nomer-description">
+                        <h3>Люкс однакомнатный</h3>
+                        <div class="additional-info-container">
+                            <div class="additional-info">
+                                <div class="room-space">
+                                    <img src="svg-images/maximize1.png" alt="">
+                                    <p>26 кв.м.</p>
+                                </div>
+                                <div class="room-descriptive-images">
+                                    <span class="tooltip" data-tooltip="Кандиционер"><img src="svg-images/snowflake.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Утюг"><img src="svg-images/iron.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Шкаф/Гардероб"><img src="svg-images/cabinet-drawer.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Постельное бельё"><img src="svg-images/pillows.png" alt=""></span>
+                                </div>
+                            </div>
+                            <div class="room-price">
+                                <p>от 2600 Р/Сутки</p>
+                            </div>
+                            <div class="more-info">
+                                <div class="content-header">
+                                    <p>Подробнее</p>
+                                    <img src="svg-images/greater-than-symbol.png" alt="">
+                                </div>
+                                <div class="more-info-description">
+                                    <p>
+                                        Номер состоит из двух комнат и санузла. Первая комната отдельная, закрывается, имеет двуспальную кровать, прикроватные тумбочки, телевизор, кондиционер, мансардные окна. Из окна открывается красивый вид на море и Крымский мост. 
+                                        Вторая комната - это кухня. Включает в себя зону для приготовления пищи, холодильник, микроволновку, чайник, газовую плиту, всю необходимую посуду. И отдельный санузел с туалетом и ванной. Максимальное количество гостей - 3.
+                                    </p>
+                                    <div class="room-information">
+                                        <div class="room-information-header">
+                                            <img src="svg-images/bedroom.png" alt="">
+                                            <h4>Оснащене номера и мебель:</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Площадь 26 кв.м</li>
+                                            <li>Кондиционирование/Система климат-контроля</li>
+                                            <li>Утюг</li>
+                                            <li>Шкаф/Гардероб</li>
+                                            <li>Дополнительные подушки и одеяла</li>
+                                            <li>Москитная сетка</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="room-information">
+                                        <div class="room-information-header">
+                                            <img src="svg-images/bath.png" alt="">
+                                            <h4>Ванная комната:</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Собственный санузел</li>
+                                            <li>Тапочки</li>
+                                            <li>Ванна</li>
+                                            <li>Фен</li>
+                                            <li>Стиральная машина</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="room-information">
+                                        <div class="room-information-header">
+                                            <img src="svg-images/fridge.png" alt="">
+                                            <h4>Кухня:</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Всё необходимое для приготовленя еды</li>
+                                            <li>Микроволновка</li>
+                                            <li>Холодильник</li>
+                                            <li>Столовые приборы</li>
+                                            <li>Обеденный стол</li>
+                                            <li>Кофе/Чай</li>
+                                            <li>Чайник</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="room-information">
+                                        <div class="room-information-header">
+                                            <img src="svg-images/tv.png" alt="">
+                                            <h4>Электроника и развлечения:</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Телевизор</li>
+                                            <li>Спутниковое ТВ</li>
+                                            <li>WiFi</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="room-information">
+                                        <div class="room-information-header">
+                                            <img src="svg-images/water-waves.png" alt="">
+                                            <h4>Вид:</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Вид на море</li>
+                                            <li>Вид на город</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="content-footer">
+                                        <p>Скрыть описание</p>
+                                        <img src="svg-images/greater-than-symbol.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nomer">
+                    <div class="nomer-swiper">
+                        <div class="swiper-wrapper">
+                
+                            <div class="swiper-slide">
+                                <img src="comfort-with-kitchen/comfort-with-kitchen.webp" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="comfort-with-kitchen/comfort-with-kitchen-2.webp" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="comfort-with-kitchen/comfort-with-kitchen-3.webp" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="comfort-with-kitchen/comfort-with-kitchen-4.webp" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="comfort-with-kitchen/comfort-with-kitchen-5.webp" alt="">
+                            </div>
+
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    
+                    </div>
+
+                    <div class="nomer-description">
+                        <h3>Комфорт с кухней</h3>
+                        <div class="additional-info-container">
+                            <div class="additional-info">
+                                <div class="room-space">
+                                    <img src="svg-images/maximize1.png" alt="">
+                                    <p>18 кв.м.</p>
+                                </div>
+                                <div class="room-descriptive-images">
+                                    <span class="tooltip" data-tooltip="Кандиционер"><img src="svg-images/snowflake.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Утюг"><img src="svg-images/iron.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Шкаф/Гардероб"><img src="svg-images/cabinet-drawer.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Постельное бельё"><img src="svg-images/pillows.png" alt=""></span>
+                                </div>
+                            </div>
+                            <div class="room-price">
+                                <p>от 2200 Р/Сутки</p>
+                            </div>
+                            <div class="more-info">
+                                <div class="content-header">
+                                    <p>Подробнее</p>
+                                    <img src="svg-images/greater-than-symbol.png" alt="">
+                                </div>
+                                <div class="more-info-description">
+                                    <p>
+                                        Номер состоит из одной комнаты и санузла. В комнате расположены 2 полуторные кровати, стол, стулья, и кухонная зона. Она имеет электроплиту, холодильник, микроволновку, чайник, всю необходимую посуду. Мансардные окна. 
+                                        Из номера открывается вид на море и Крымский мост. Санузел состоит из душа и туалета. Максимальное количество гостей - 3.
+                                    </p>
+                                    <div class="room-information">
+                                        <div class="room-information-header">
+                                            <img src="svg-images/bedroom.png" alt="">
+                                            <h4>Оснащене номера и мебель:</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Площадь 18 кв.м</li>
+                                            <li>Кондиционирование/Система климат-контроля</li>
+                                            <li>Утюг</li>
+                                            <li>Шкаф/Гардероб</li>
+                                            <li>Дополнительные подушки и одеяла</li>
+                                            <li>Москитная сетка</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="room-information">
+                                        <div class="room-information-header">
+                                            <img src="svg-images/bath.png" alt="">
+                                            <h4>Ванная комната:</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Собственный санузел</li>
+                                            <li>Тапочки</li>
+                                            <li>Душ</li>
+                                            <li>Фен</li>
+                                            <li>Стиральная машина</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="room-information">
+                                        <div class="room-information-header">
+                                            <img src="svg-images/fridge.png" alt="">
+                                            <h4>Кухня:</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Всё необходимое для приготовленя еды</li>
+                                            <li>Микроволновка</li>
+                                            <li>Холодильник</li>
+                                            <li>Столовые приборы</li>
+                                            <li>Обеденный стол</li>
+                                            <li>Кофе/Чай</li>
+                                            <li>Чайник</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="room-information">
+                                        <div class="room-information-header">
+                                            <img src="svg-images/tv.png" alt="">
+                                            <h4>Электроника и развлечения:</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Телевизор</li>
+                                            <li>Спутниковое ТВ</li>
+                                            <li>WiFi</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="room-information">
+                                        <div class="room-information-header">
+                                            <img src="svg-images/water-waves.png" alt="">
+                                            <h4>Вид:</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Вид на море</li>
+                                            <li>Вид на город</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="content-footer">
+                                        <p>Скрыть описание</p>
+                                        <img src="svg-images/greater-than-symbol.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nomer">
+                    <div class="nomer-swiper">
+                        <div class="swiper-wrapper">
+                
+                            <div class="swiper-slide">
+                                <img src="comfort/comfort.webp" alt="">
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <img src="comfort/comfort-2.webp" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="comfort/comfort-3.webp" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="comfort/comfort-4.webp" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="comfort/comfort-5.webp" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="comfort/comfort-6.webp" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="comfort/comfort-7.webp" alt="">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="comfort/comfort-8.webp" alt="">
+                            </div>
+
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    
+                    </div>
+        
+                    <div class="nomer-description">
+                        <h3>Комфорт</h3>
+                        <div class="additional-info-container">
+                            <div class="additional-info">
+                                <div class="room-space">
+                                    <img src="svg-images/maximize1.png" alt="">
+                                    <p>18 кв.м.</p>
+                                </div>
+                                <div class="room-descriptive-images">
+                                    <span class="tooltip" data-tooltip="Кандиционер"><img src="svg-images/snowflake.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Утюг"><img src="svg-images/iron.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Шкаф/Гардероб"><img src="svg-images/cabinet-drawer.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Постельное бельё"><img src="svg-images/pillows.png" alt=""></span>
+                                </div>
+                            </div>
+                            <div class="room-price">
+                                <p>от 1900 Р/Сутки</p>
+                            </div>
+                            <div class="more-info">
+                                <div class="content-header">
+                                    <p>Подробнее</p>
+                                    <img src="svg-images/greater-than-symbol.png" alt="">
+                                </div>
+                                <div class="more-info-description">
+                                    <p>
+                                        Номер состоит из одной комнаты и санузла. В номере расположены 2 полуторные кровати, стол, стулья. Окна мансардные. Кухонная зона включается в себя холодильник, микроволновку, чайник, всю необходимую посуду. 
+                                        По требования предоставляется электроплита для приготовления пищи. Санузел состоит из душа и туалета. Из окон открывается вид на внутренний двор и немного видно море. Максимальное количество гостей - 3.
+                                    </p>
+                                    <div class="room-information">
+                                        <div class="room-information-header">
+                                            <img src="svg-images/bedroom.png" alt="">
+                                            <h4>Оснащене номера и мебель:</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Площадь 18 кв.м</li>
+                                            <li>Кондиционирование/Система климат-контроля</li>
+                                            <li>Утюг</li>
+                                            <li>Шкаф/Гардероб</li>
+                                            <li>Дополнительные подушки и одеяла</li>
+                                            <li>Москитная сетка</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="room-information">
+                                        <div class="room-information-header">
+                                            <img src="svg-images/bath.png" alt="">
+                                            <h4>Ванная комната:</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Собственный санузел</li>
+                                            <li>Тапочки</li>
+                                            <li>Душ</li>
+                                            <li>Фен</li>
+                                            <li>Стиральная машина</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="room-information">
+                                        <div class="room-information-header">
+                                            <img src="svg-images/fridge.png" alt="">
+                                            <h4>Кухня:</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Всё необходимое для приготовленя еды</li>
+                                            <li>Микроволновка</li>
+                                            <li>Холодильник</li>
+                                            <li>Столовые приборы</li>
+                                            <li>Обеденный стол</li>
+                                            <li>Кофе/Чай</li>
+                                            <li>Чайник</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="room-information">
+                                        <div class="room-information-header">
+                                            <img src="svg-images/tv.png" alt="">
+                                            <h4>Электроника и развлечения:</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Телевизор</li>
+                                            <li>Спутниковое ТВ</li>
+                                            <li>WiFi</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="room-information">
+                                        <div class="room-information-header">
+                                            <img src="svg-images/water-waves.png" alt="">
+                                            <h4>Вид:</h4>
+                                        </div>
+                                        <ul>
+                                            <li>Вид на море</li>
+                                            <li>Вид на внутренний двор</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="content-footer">
+                                        <p>Скрыть описание</p>
+                                        <img src="svg-images/greater-than-symbol.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="about-us">
+            <div class="about-us-wrapper">
+                <h2 class="about-us-header">О гостевом доме</h2>
+                <div class="about-us-description">
+                    <p>
+                        Гостевой дом Калинина 10 находится в 5 километрах от центра на тихой улице.
+                    </p>
+                    <p>
+                        Есть номера класса комфорт, комфорт с кухней, люкс двухкомнатный и однокомнатный. 
+                        В номерах красивый вид, современный ремонт, ортопедические кровати, кондиционер и WiFi. 
+                    </p>
+                </div>
+            </div>
+            <div class="about-us-photos">
+                <img src="luxury-one-room/luxury.webp" alt="">
+                <img src="luxury-one-room/luxury-2.webp" alt="">
+            </div>
+        </section>
+
+        <section class="places-near-by">
+            <h2>Места рядом с нами</h2>
+            <ul>
+                <li>Древний город Мирмекий</li>
+                <li>Пляж Молодёжный (700 м.)</li>
+                <li>Комсомольский парк (2 км.)</li>
+                <li>Музей истории обороны Аджимушкайских каменоломен (7 км.)</li>
+                <li>Гора Митридат (8 км.)</li>
+                <li>Азовское море (20 км.)</li>
+                <li>Чёрное море (20 км.)</li>
+            </ul>
+            <p>
+                Отдыхая у нас, мы рекомендуем вам съездить на один из красивых пляжей Чёрного или Азовского моря. 
+                А также прогуляться по Комсомольскому парку и забраться на гору Митридат!
+            </p>
+            <div class="images-of-places">
+                <a data-fslightbox="place" href="luxury-two-rooms/luxury.webp">
+                    <img src="luxury-two-rooms/luxury.webp" alt="">
+                </a>
+                <a data-fslightbox="place" href="luxury-two-rooms/luxury-2.webp">
+                    <img src="luxury-two-rooms/luxury-2.webp" alt="">
+                </a>
+                <a data-fslightbox="place" href="luxury-two-rooms/luxury-3.webp">
+                    <img src="luxury-two-rooms/luxury-3.webp" alt="">
+                </a>
+                <a data-fslightbox="place" href="luxury-two-rooms/luxury-4.webp">
+                    <img src="luxury-two-rooms/luxury-4.webp" alt="">
+                </a>
+            </div>
+        </section>
+
+        <section class="reviews">
+            <span class="subheader">Отдыхающим у нас нравится</span>
+            <h2>Отзывы наших гостей</h2>
+            <div class="reviews-wrapper">
+
+                <div class="review">
+                    <h3>Галина Сафонова</h3>
+                    <img src="svg-images/ranking.svg" alt="">
+                    <p>
+                        "Отличные номера! Хороший ремонт, чисто, уютно, комфортно. В номере удобные ортопеические кровати, небольшая кухня, где есть все необходимое, кондиционер, телевизор, санузел и Wi-fi. До пляжа близко. Рекомендую!"
+                    </p>
+                </div>
+
+                <div class="review">
+                    <h3>Алексей</h3>
+                    <img src="svg-images/ranking.svg" alt="">
+                    <p>
+                        "Очень отличное место. Суперский ремонт до море 5 мин . Остался очень доволен отдыхом. Анастасии (администратору) отдельное спасибо. Рекомендую!!!"
+                    </p>
+                </div>
+
+                <div class="review">
+                    <h3>Иван Иванов</h3>
+                    <img src="svg-images/ranking.svg" alt="">
+                    <p>
+                        "Шикарное место! Отдыхали с супругой и детьми)))) отдельное огромное спасибо за гостеприимство Анастасии🤗"
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="reserve-a-room">
+            <div class="reserve-a-room-wrapper">
+                <form class="contact-form" id="form" action="/">
+                    <h2>Забронируйте отдых!</h2>
+                    <div class="form-header">
+                        <div class="form-box">
+                            <label for="name">Имя*</label>
+                            <input type="text" id="name" placeholder="Имя" required style="text-transform: capitalize;" required>    
+                        </div>
+        
+                        <div class="form-box">
+                            <label for="number">Телефон*</label>
+                            <input type="tel" id="phone_id" required placeholder="Телефон" data-tel-input required>
+                        </div> 
+        
+                        <div class="form-box">
+                            <label for="date">Дата заезда*</label>
+                            <input type="date" id="date_id" required>
+                        </div> 
+                    </div>
+                    <div class="form-footer">
+                        <label for="message">Сообщение*</label>
+                        <textarea id="message" rows="5" placeholder="Ваши пожелания" required></textarea>
+                    </div>
+                    <button id="formButton" type="submit">Отправить сообщение</button>
+                </form>
+            </div>
+        </section>
+        <section class="contacts">
+            <div class="contact-info">
+                <div class="contact-description">
+                    <h2>Контакты</h2> 
+                    <p class="contacts-description">
+                        Вас ждут уютные номера, из которых открывается красивый вид на море. Здесь вы сможете комфортно отдохнуть всей семьёй, сходить на пляж, поездить по многим местам. И мы сделаем всё, чтобы вам у нас понравилось!
+                    </p>
+                    <p class="contacts-phone"><span class="bold">Телефон</span>: <a href="tel: +79114263310">+7 (978) 118-21-25</a></p>
+                    <div class="contacts-location">
+                        <p><span class="bold">Адрес</span>: Керчь, улица Калинина, дом 10</p>
+                    </div>
+                    <div class="contacts-time">
+                        <p><span class="bold">Время заезда</span>: c 2 часов дня до 12 ночи</p>
+                    </div>  
+                </div>
+                <div class="contacts-map" id="yandex-map"></div>   
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© Гостевой дом Калинина 10. Все права защищены. | Создание сайта - <a href="https://original-websites.ru">Original Websites</a></p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="fslightbox.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=7953d849-3712-458e-912c-5a6a5aa2c38a&lang=ru_RU" type="text/javascript"></script>
+</body>
+</html>

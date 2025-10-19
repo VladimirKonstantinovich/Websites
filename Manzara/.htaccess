@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteRule ^(.*)/index\.html$ /$1/ [R=301,L]
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^manzara-hotel.ru$
+RewriteRule ^(.*)$ https://manzara-hotel.ru/$1 [R=301,L]

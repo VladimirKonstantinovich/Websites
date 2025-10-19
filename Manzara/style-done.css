@@ -1,0 +1,2979 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --primary-color: hsl(28, 61%, 69%);
+    --primary-color-drk: hsl(28, 45%, 52%);
+    --secondary-color: hsl(28, 17%, 80%);
+    --secondary-color-mild-drk: hsl(28, 16%, 67%);
+    --secondary-text-color: rgb(224, 224, 224);
+    --section-margin: 4rem;
+    --section-padding: 3rem;
+    --max-section-width: 1300px;
+}
+
+body{
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.1rem;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    letter-spacing:  1px;
+    line-height: 1.7;
+    color: rgb(15, 15, 15);
+}
+
+::-moz-selection { /*  For Firefox */
+    background: var(--primary-color);
+    color: white;
+  }
+  
+::selection {
+    background: var(--primary-color);
+    color: white;
+  }  
+
+button{
+    background-color: transparent;
+    border: 0;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+h1{
+    font-size: clamp(1.3rem, 4.5vw + 0.5rem, 3.5rem);
+    font-weight: 500;
+    line-height: 1.2;
+    max-width: 30ch;
+    margin-top: 3.5rem;
+    margin-bottom: 2.5rem;
+}
+
+h2{
+    font-size: clamp(1.1rem, 4vw + 0.5rem, 2.5rem);
+    font-weight: 500;
+    margin: 2rem 0;
+    line-height: 1.1;
+}
+
+h3{
+    font-size: clamp(1rem, 1vw + 1.2rem, 1.8rem);
+    font-weight: 400;
+    margin: 2rem 0;
+    line-height: 1.2;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+@media screen and (max-width: 1085px) {
+    body{
+        --section-margin: 3rem;
+    }
+}
+ 
+/* End of reset */
+
+/* Navigation section */
+
+header nav .nav-container{
+    display: grid;
+    grid-template-rows: 100px 100px;
+}
+
+header nav .nav-container .top-navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+}
+
+header nav .nav-container .top-navigation .address{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+header nav .nav-container .top-navigation .address img{
+    width: 32px;
+    height: 32px;
+}
+
+header nav .nav-container .top-navigation .phone-number a{
+    border-bottom: 2px solid var(--primary-color);
+}
+
+header nav .nav-container .bottom-navigation{
+    width: 90%;
+    max-width: var(--max-section-width);
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+    margin: 0 auto;
+    gap: 1.5rem;
+}
+
+header nav .nav-container .bottom-navigation .yandex-rating .hotel-image{
+    display: none;
+}
+
+header nav .nav-container .bottom-navigation .navigation{
+    margin-left: auto;
+}
+
+header nav .nav-container .bottom-navigation .navigation .list-of-pages{
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav .nav-container .bottom-navigation .navigation .phone-number,
+header nav .nav-container .bottom-navigation .navigation .yandex-rating{
+    display: none;
+}
+
+@media screen and (max-width: 1125px){
+    header nav .nav-container .bottom-navigation .navigation .list-of-pages{
+        gap: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 1045px){
+    .nav-container .navigation{
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 100px;
+        right: 0;
+        bottom: 0;
+        transform: translateX(100%);
+        padding-top: 5rem;
+        padding-bottom: 2rem;
+        margin-left: calc(1rem + 5vw);
+        background-color: rgb(242,241,239);
+        color: rgb(17, 17, 17);
+        transition: transform 400ms ease-in;
+        width: 85%;
+        max-width: 400px;
+        z-index: 9;
+    }
+
+    .nav-container .navigation .list-of-pages{
+        flex-direction: column;
+        padding-left: 4rem;
+    }
+
+    .nav-container .navigation.active{
+        transform: translateX(0%);
+    }
+    
+    .navigation a::before{
+        content: "";
+    }
+    
+    .navigation a:hover::before{
+        transform: scaleX(0);
+    }
+    
+    .navigation a{
+        transition: color 200ms ease-in-out;
+    }
+    
+    .navigation a:hover{
+        color: #fddc61;
+    }
+
+    .hamburger{
+        cursor: pointer;
+        width: 40px;
+        height: 25px;
+        position: relative;
+        z-index: 99;
+        margin-left: auto;
+    }
+
+    .hamburger-menu-container span{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #111111;
+    }
+
+    .hamburger .middle-line{
+        top: 0.6rem;
+        transition: transform 250ms ease-in-out, opacity 150ms linear;
+    }
+
+    .hamburger .bottom-line{
+        top: 1.2rem;
+    }
+
+    .hamburger.clicked .middle-line{
+        transform: translateX(-150%);
+        opacity: 0;
+    }
+
+    .hamburger .top-line,
+    .bottom-line{
+        transition: transform 400ms ease-in-out;
+    }
+
+    .hamburger.clicked .top-line{
+        transform: rotate(225deg) translateY(-14px);
+    }
+
+    .hamburger.clicked .bottom-line{
+        transform: rotate(-45deg) translateY(-14px);
+    } 
+}
+
+@media screen and (max-width: 800px){
+    header nav .nav-container .top-navigation{
+        display: none;
+    }
+
+    .nav-container .navigation{
+        top: 0;
+        padding-top: 8rem;
+    }
+
+    header nav .nav-container{
+        grid-template-rows: 100px;
+    }
+
+    header nav .nav-container .bottom-navigation .yandex-rating .yandex-image{
+        display: none;
+    }
+
+    header nav .nav-container .bottom-navigation .yandex-rating .hotel-image{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    header nav .nav-container .bottom-navigation .navigation .bottom-divider{
+        display: inline-block;
+        border-top: 1px solid black;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    header nav .nav-container .bottom-navigation .navigation .phone-number{
+        margin-top: 1rem;
+        display: block;
+        text-align: center;
+    }
+    
+    header nav .nav-container .bottom-navigation .navigation .yandex-rating{
+        display: block;
+        width: 150px;
+        margin-inline: auto;
+        margin-top: 1rem;
+    }
+
+    header nav .nav-container .bottom-navigation .navigation .yandex-rating .yandex-image{
+        display: block;
+    }
+}
+
+.navigation a{
+    position: relative;
+    transition: color 250ms linear;
+}
+
+.navigation a.active{
+    color: var(--primary-color);
+}
+
+.navigation a::before{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    transform: scaleX(0%);
+    transform-origin: right;
+    transition: transform 250ms linear;
+    background-color: hsl(29, 69%, 72%);
+    height: 2px;
+}
+
+.navigation a:hover::before{
+    transform: scaleX(100%);
+    transform-origin: left;
+}
+
+.navigation a:hover{
+    color: hsl(29, 43%, 57%);
+}
+
+.header-content img{
+    position: absolute;
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    object-position: center center;
+    z-index: -1;
+    filter: brightness(0.55);
+}
+
+.header-content .header-text{
+    color: rgb(245, 245, 245);
+    width: 90%;
+    max-width: var(--max-section-width);
+    margin: 0 auto;
+}
+
+.header-content .header-text h1{
+    margin-top: 0;
+    padding-top: 3rem;
+}
+
+.header-content .header-text p.header-description{
+    font-weight: 500;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    max-width: 33rem;
+}
+
+.header-content .header-text .header-review p.nikolays-review{
+    max-width: 50ch;
+    font-size: 1.03rem;
+    margin-bottom: 0.5rem;
+}
+
+.header-content .header-text .header-review .review-rating{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.client-ranking{
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* End of header and navigation */
+
+/* Benefits section */
+
+main .benefits{
+    margin-bottom: var(--section-margin);
+    overflow: hidden;
+}
+
+main .benefits h2{
+    width: 95%;
+    margin-inline: auto;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+main .benefits .benefit img{
+    width: 50px;
+    height: 50px;
+}
+
+
+@media screen and (max-width: 1032px) {
+    main .benefits h2{
+        max-width: 20ch;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    main .benefits{
+        font-size: 1rem;
+        line-height: 1.55;
+    }
+
+    main .benefits .benefit-header{
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Отступ от главной картинки */
+
+@media only screen and (min-width: 361px) and (max-width: 425px)  {
+    main .benefits h2{
+        margin-top: 4.5rem;
+    }
+}
+
+@media screen and (max-width: 359px) {
+    main .benefits h2{
+        margin-top: 4rem;
+    }
+}
+
+main .benefits .benefit-header{
+    margin-top: 0.5rem;
+}
+
+main .benefits .benefits-wrapper{
+    width: 90%;
+    max-width: var(--max-section-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+@media screen and (max-width: 1100px) {
+    main .benefits .benefits-wrapper{
+        grid-template-columns: 1fr;
+    }
+
+    main .benefits .benefit{
+        position: relative;
+        padding-top: 3rem;
+    }
+    
+    main .benefits .benefit::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -10%;
+        background-image: url('design-elements/lines.jpg');
+        background-size: contain;
+        width: 120%;
+        height: 18px;
+        z-index: -1;
+    }
+    
+}
+
+/* End of benefits section */
+
+/* Rooms section */
+
+main .nomera{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    justify-content: center;
+    background-color: rgb(242,241,239);
+}
+
+main .nomera h2{
+    margin-top: 3rem;
+}
+
+.nomera-swiper,
+.birthday-swiper{
+    max-height: 700px;
+    width: 100%;
+    --swiper-pagination-bullet-size: 15px;
+    --swiper-pagination-bullet-width: 15px;
+    --swiper-pagination-bullet-height: 15px; 
+    --swiper-pagination-bullet-horizontal-gap: 7px;
+    --swiper-navigation-size: 25px;
+    --swiper-navigation-color: rgb(126, 126, 126);
+    overflow: hidden;
+}
+
+.nomera-swiper .swiper-pagination-bullet,
+.birthday-swiper .swiper-pagination-bullet{
+    background-color: hsl(16, 80%, 92%);
+}
+
+.nomera-swiper .swiper-slide{
+    width: 500px;
+    overflow: hidden;
+}
+
+.nomera-swiper .swiper-slide img{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    object-position: 70% 55%;
+    filter: brightness(90%);
+}
+
+.nomera-swiper .swiper-button-prev,
+.nomera-swiper .swiper-button-next,
+.birthday-swiper .swiper-button-prev,
+.birthday-swiper .swiper-button-next{
+    background-color: rgb(237, 247, 255);
+    padding: 1.5rem;
+    border-radius: 50%;
+    box-shadow: rgba(70, 70, 70, 0.2) 0px 2px 8px 0px;
+}
+
+main .nomera .nomera-description{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main .nomera .nomera-description .description-content{
+    max-width: 55ch;
+}
+
+main .nomera .nomera-description .description-content p:first-child{
+    margin-bottom: 1rem;
+}
+
+main .nomera .room-conveniences .conveniences ul{
+    display: flex;
+    gap: 4.5rem;
+    margin-left: 1.5rem;
+}
+
+main .nomera .room-conveniences{
+    margin-bottom: 2rem;
+}
+
+main .nomera .room-conveniences .conveniences ul li{
+    position: relative;
+}
+
+main .nomera .room-conveniences .conveniences ul li::before{
+    content: "";
+    position: absolute;
+    left: -1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 2px;
+    background-color: var(--primary-color-drk);
+}
+
+main .nomera .more-about-rooms{
+    display: inline-block;
+    border: 2px solid var(--primary-color-drk);
+    border-radius: 3px;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1010px){
+    main .nomera{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    main .nomera .nomera-description .description-content{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 495px){
+    .nomera-swiper{
+        --swiper-pagination-bullet-horizontal-gap: 7px;
+        --swiper-navigation-size: 20px;
+        --swiper-navigation-color: rgb(126, 126, 126);
+    }
+
+    .nomera-swiper .swiper-button-prev,
+    .nomera-swiper .swiper-button-next,
+    .birthday-swiper .swiper-button-prev,
+    .birthday-swiper .swiper-button-prev{
+        padding: 1.3rem;
+    }
+
+    main .nomera .room-conveniences .conveniences ul{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 315px){
+    main .nomera .more-about-rooms{
+        padding: 0.8rem;
+    }
+}
+
+/* End of rooms section */
+
+/* Additional information section */
+
+main .additional-information{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    margin: 0 auto;
+    padding-block: var(--section-margin);
+    padding-inline: 3rem;
+    color: rgb(250, 250, 250);
+}
+
+main .additional-information::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('design-elements/wall.jpg');
+    background-size: cover;
+    filter: brightness(75%);
+    z-index: -1;
+}
+
+main .additional-information .nomera-aktsii{
+    order: 2;
+}
+
+main .additional-information .vse-aktsii{
+    color: hsl(26, 92%, 91%);
+    border-bottom: 1px solid hsl(27, 80%, 86%);
+}
+
+@media screen and (max-width: 1000px) {
+    main .additional-information{
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    
+    main .additional-information{
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.4;
+        padding-inline: 1.5rem;
+    }
+
+    main .additional-information .nomera-aktsii{
+        order: 0;
+    }
+}
+
+/* End of additional information section */
+
+/* Services section */
+
+main .services-wrapper{
+    background-color: rgb(242,241,239);
+    padding-top: 1rem;
+}
+
+main .services{
+    max-width: var(--max-section-width);
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: var(--section-margin);
+    padding-bottom: 3rem
+}
+
+main .services .all-services{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+main .services h2{
+    text-align: center;
+}
+
+main .services .services-description{
+    max-width: 80ch;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+main .services .service{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+main .services .service img{
+    max-width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 10px;
+    filter: brightness(0.70);
+}
+
+main .services .service h3{
+    position: absolute;
+    bottom: 4rem;
+    left: 1.5rem;
+    font-weight: 600;
+    font-size: clamp(1.4rem, 2vw + 0.5rem, 1.5rem);
+    color: rgb(245, 245, 245);
+    margin: 0;
+}
+
+main .services .service h3.birthday{
+    bottom: 2rem;
+    max-width: 14ch;
+}
+
+@media screen and (max-width: 1115px) {
+    main .services .service h3.chydo-oslik{
+        max-width: 15ch;
+        bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    main .services .all-services{
+        grid-template-columns: 1fr;
+    }
+
+    main .services .all-services .service h3{
+        max-width: 100%;
+        bottom: 3rem;
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    main .services .all-services .service h3{
+        font-size: 1.4rem;
+    }
+
+    main .services .services-description{
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    
+}
+
+@media screen and (max-width: 350px) {
+    main .services .all-services .service h3.chydo-oslik .break-line{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 290px) {
+    main .services .all-services .service h3{
+       bottom: 1.5rem;
+    }
+}
+
+/* End of services section */
+
+/* Reviews section */
+
+main .reviews{
+    width: 90%;
+    max-width: var(--max-section-width);
+    margin: 0 auto;
+    margin-bottom: var(--section-margin);
+}
+
+
+main .reviews h2{
+    margin-bottom: 0.5rem;
+    margin-left: 2.5rem;
+}
+
+main .reviews h2{
+    font-size: clamp(1.1rem, 4vw + 0.5rem, 1.7rem);
+    font-weight: 400;
+}
+
+main .reviews h3{
+    font-size: clamp(1.1rem, 4vw + 0.5rem, 2.2rem);
+    font-weight: 500;
+}
+
+main .reviews h2 span{
+    position: relative;
+}
+
+main .reviews h2 span::after,
+main .reviews h2 span::before{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background-color: var(--primary-color-drk);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+main .reviews h2 span::after{
+    left: -2.5rem;
+}
+
+main .reviews h2 span::before{
+    right: -2.5rem;
+}
+
+main .reviews h3{
+    margin-block: 0;
+    margin-bottom: 0.5rem;
+}
+
+main .reviews .swiper-wrapper{
+    display: flex;
+    width: var(--max-section-width);
+    padding-top: 4rem;
+}
+
+main .reviews .swiper-wrapper .review{
+    border: 2px solid var(--primary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+main .reviews .swiper-wrapper .review .review-content{
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+main .reviews .swiper-wrapper .review .client-review-info{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+main .reviews .swiper-wrapper .review .client-review-info h4{
+    font-weight: 500;
+}
+
+.reviews-swiper{
+    position: relative;
+    --swiper-navigation-size: 25px;
+    --swiper-navigation-color: rgb(239, 239, 239);
+}
+
+.reviews-swiper .swiper-button-prev,
+.reviews-swiper .swiper-button-next{
+    background-color: hsl(204, 69%, 43%);
+    padding: 1.2rem;
+    border-radius: 3px;
+    box-shadow: rgba(70, 70, 70, 0.2) 0px 2px 8px 0px;
+    position: absolute;
+    top: 1.5rem;
+}
+
+.reviews-swiper .swiper-button-prev{
+    left: unset;
+    right: 4rem;
+}
+
+@media screen and (max-width: 500px) {
+    main .reviews .swiper-wrapper .review p{
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    main .reviews .swiper-wrapper .review .review-content{
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+    }
+
+    main .reviews .swiper-wrapper .review:nth-child(1){
+        order: 1;
+    }
+}
+
+@media screen and (max-width: 390px){
+        main .reviews .swiper-wrapper .review p{
+        font-size: 0.9rem;
+    }
+}
+
+/* End of reviews section */
+
+/* Call to action section */
+
+main .call-to-action{
+    width: 90%;
+    max-width: var(--max-section-width);
+    margin: 0 auto;
+    color: rgb(246, 246, 246);
+}
+
+main .call-to-action h2{
+    margin-bottom: 1rem;
+}
+
+main .call-to-action p.call-to-action-description{
+    margin-bottom: 3rem;
+    max-width: 50ch;
+    margin-inline: auto;
+    line-height: 1.4;
+}
+
+main .call-to-action-wrapper{
+    position: relative;
+    padding-top: 0.1rem;
+    padding-bottom: 2.1rem;
+    margin-bottom: var(--section-margin);
+}
+ 
+main .call-to-action-wrapper::before{
+    content: "";
+    position: absolute;
+    inset: 0;  
+    background-image: url('main-images/cta-image.jpg');
+    background-position: 50% 58%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(50%);
+    z-index: -1;
+}
+
+main .call-to-action h2,
+main .call-to-action p{
+    text-align: center;
+}
+
+main .call-to-action .contact-form .form-header{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+main .call-to-action .contact-form .form-header input{
+    border: 0;
+    background-color: rgb(240, 240, 240);
+    border-radius: 5px;
+}
+
+main .call-to-action .contact-form .form-header input,
+main .call-to-action .contact-form form button{
+    padding: 0.5rem 2rem;
+}
+
+main .call-to-action .contact-form .form-header input:focus{
+    outline: 0; 
+    background-color: rgb(250, 250, 250);
+}
+
+main .call-to-action .contact-form .form-header input::placeholder{
+    color: rgb(35, 35, 35);
+}
+ 
+main .call-to-action .contact-form form button,
+main.contacts-main .contact-form form button{
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+}
+
+main .call-to-action .contact-form form button:hover,
+main.contacts-main .contact-form form button:hover{
+    background-color: hsl(28, 78%, 71%);
+}
+
+main .call-to-action .contact-form form .form-message{
+    margin-top: 1rem;
+}
+
+main .call-to-action .contact-form form p{
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 990px) {
+    main .call-to-action .contact-form .form-header input,
+    main .call-to-action .contact-form form button{
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media screen and (max-width: 935px) {
+    main .call-to-action .contact-form .form-header{
+        flex-direction: column;
+    }
+
+    main .call-to-action .contact-form .form-header input,
+    main .call-to-action .contact-form form button{
+        width: 100%;
+        max-width: 550px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    main .call-to-action .contact-form form p{
+        max-width: 550px;
+        text-align: left;
+        margin-inline: auto;
+        line-height: 1.5;
+    }
+
+    main .call-to-action .contact-form form .form-message{
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    main .call-to-action p.call-to-action-description{
+        text-align: left;
+    }
+}
+
+/* End of call to action */
+
+/* How to get to us section */
+
+main .how-to-get-to-us{
+    width: 90%;
+    max-width: var(--max-section-width);
+    margin-inline: auto;
+    margin-bottom: var(--section-margin);
+}
+
+main .how-to-get-to-us h2{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+main .how-to-get-to-us .get-to-us-container{
+    display: flex;
+    gap: 3rem;
+}
+
+main .how-to-get-to-us .get-to-us-map{
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    background-color: rgb(255, 242, 226);
+}
+
+main .how-to-get-to-us .get-to-us-information{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+main .how-to-get-to-us .get-to-us-information .transport-name{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--primary-color-drk);
+    margin-bottom: 2rem;
+}
+
+main .how-to-get-to-us .get-to-us-information .transport-name h3{
+    display: flex;
+    gap: 1.5rem;
+    padding-left: 1.5rem;
+    margin-bottom: 0;
+    padding-bottom: 0.3rem;
+    width: 50%;
+    font-size: clamp(1rem, 1vw + 1.2rem, 1.5rem);
+    cursor: pointer;
+}
+
+main .how-to-get-to-us .get-to-us-information .transport-name h3 img{
+    width: 32px;
+    height: 32px;
+    pointer-events: none;
+}
+
+main .how-to-get-to-us .get-to-us-information .transport-name h3.active{
+    border-bottom: 2px solid var(--primary-color-drk);
+}
+
+main .how-to-get-to-us .get-to-us-information .transport-name h3:not(.active){
+    color: hsl(0, 0%, 30%);
+    font-size: clamp(1rem, 1vw + 1rem, 1.3rem);
+}
+
+main .how-to-get-to-us .get-to-us-information .transport-info p{
+    font-size: 1rem;
+}
+
+main .how-to-get-to-us .get-to-us-information .transport-info p span{
+    display: block;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+main .how-to-get-to-us .get-to-us-information .transport-info > p:not(.active){
+    display: none;
+}
+
+main .how-to-get-to-us .get-to-us-information .transport-info .additional-info{
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--primary-color-drk);
+}
+
+/* Yandex maps */
+
+.contacts-map{
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+}
+
+.ymaps-2-1-79-gototech{
+    display: none !important;
+}
+
+.balloon .balloon-title h2{
+    text-align: left;
+    font-size: clamp(1rem, 4vw + 1rem, 1.3rem);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    padding-top: 1rem;
+}
+ 
+.balloon{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.balloon .balloon-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgb(179, 179, 179);
+    margin-bottom: 0;
+    gap: 1.5rem;
+}
+
+.balloon .balloon-header div{
+    margin-bottom: 0;
+}
+
+.balloon div{
+    margin-bottom: 1rem;
+}
+
+.balloon .balloon-location,
+.balloon .balloon-phone,
+.balloon .balloon-working-hours{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.balloon .balloon-review{
+    width: max-content;
+}
+
+.balloon .balloon-review .client-ranking{
+    gap: 0.3rem;
+}
+
+.balloon .balloon-phone{
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgb(179, 179, 179);
+    justify-content: center;
+}
+
+.balloon .balloon-location{
+    padding: 0.5rem 0;
+}
+
+.balloon .balloon-location img,
+.balloon .balloon-phone img,
+.balloon .balloon-working-hours img{
+    width: 20px;
+}
+ 
+.balloon .balloon-how-to-get-to-us{
+    padding: 1rem;
+    background-color: #8fbdf9;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1050px) {
+    main .how-to-get-to-us .get-to-us-container{
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    main .how-to-get-to-us .get-to-us-map{
+        flex-wrap: wrap;
+        flex-grow: 1;
+    }
+
+    main .how-to-get-to-us .get-to-us-information{
+        max-width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 565px) {
+    main .how-to-get-to-us .get-to-us-information .transport-name{
+        flex-direction: column;
+    }
+
+    main .how-to-get-to-us .get-to-us-information{
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    main .how-to-get-to-us .get-to-us-information .transport-name{
+        border-bottom: 0;
+    }
+
+    main .how-to-get-to-us .get-to-us-information .transport-name h3{
+        width: 100%;
+        border-bottom: 1px solid var(--primary-color-drk);
+    }
+
+    main .how-to-get-to-us .get-to-us-information .transport-name h3.active{
+        border-bottom: 3px solid var(--primary-color-drk);
+    }
+}
+
+/* End of how to get to us section */
+
+/* Footer */
+
+footer{
+    background-color: rgb(44, 44, 44);
+    color: rgb(245, 245, 245);
+}
+
+footer .footer-top{
+    max-width: var(--max-section-width);
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+    padding-block: var(--section-padding);
+}
+
+footer .footer-top h3{
+    margin-bottom: 1rem;
+ 
+}
+
+footer .footer-top .footer-about{
+    margin-top: 2rem;
+}
+
+footer .footer-top .footer-about img{
+    max-width: 135px;
+    max-height: 70px;
+}
+
+footer .footer-top .footer-about p{
+    max-width: 40ch;
+}
+
+footer .footer-top .footer-pages .main-pages,
+footer .footer-top .footer-otdih .otdih-pages{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: rgb(220, 220, 220);
+    font-size: 1.05rem;
+}
+
+footer .footer-top .footer-pages .main-pages a:hover,
+footer .footer-top .footer-otdih .otdih-pages a:hover{
+    color: rgb(245, 245, 245);
+    text-decoration: underline;
+}
+
+footer .footer-top .footer-contacts .contacts-info div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .footer-top .footer-contacts .contacts-location p{
+    max-width: 25ch;
+}
+
+footer .footer-top .footer-contacts .contacts-info,
+footer .footer-top .footer-about{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.05rem;
+}
+
+footer .footer-top .footer-about{
+    gap: 1rem;
+}
+
+footer .footer-top .footer-contacts .contacts-info div img{
+    width: 32px;
+    height: 32px;
+    color: hsl(28, 87%, 82%);
+}
+
+footer .footer-bottom{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer .footer-bottom-wrapper{
+    padding-block: 30px;
+    border-top: 1px solid hsl(28, 57%, 75%);
+}
+
+@media screen and (max-width: 1190px) {
+    footer .footer-top{
+        display: grid;
+        grid-template-columns: 1fr 400px;
+        gap: 1.5rem 3rem;
+        justify-content: center;
+    }
+
+    footer .footer-top .footer-about,
+    footer .footer-top .footer-pages h3{
+        margin-top: 1rem;
+    }
+
+    footer .footer-top .footer-contacts .contacts-location p{
+        max-width: initial;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    footer .footer-bottom p{
+        max-width: 50ch;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    footer .footer-top{
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    footer .footer-top .footer-about{
+        margin-top: 0;
+    }
+
+    footer .footer-top .footer-about img{
+        width: 135px;
+    }
+
+    footer .footer-top .footer-contacts .contacts-info,
+    footer .footer-top .footer-about{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 610px){
+    footer .footer-bottom p{
+        max-width: 100%;
+        margin: initial;
+    }
+
+    footer .footer-bottom .divider{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 420px){
+   footer .footer-bottom .website-divider{
+        display: block;
+   }
+}
+
+@media screen and (max-width: 395px){
+    footer .footer-top .footer-contacts .contacts-location p{
+        max-width: 25ch;
+    }
+ }
+
+/* End of footer */
+
+/* Pages entry styles */
+
+header .header-intro{
+    color: rgb(255, 255, 255);
+    height: 40vh;
+    padding-block: var(--section-padding);
+    margin-bottom: var(--section-margin);
+    background-image: url('/main-images/hero-contacts.jpg');
+    background-position: 50% 58%;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+header .header-intro h1{
+    font-size: clamp(2rem, 4.5vw + 0.5rem, 3.5rem);
+    position: absolute;
+    bottom: 10%;
+}
+
+header .header-intro::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:  rgba(25, 25, 25, 0.30);
+}
+
+header .header-intro-wrapper{
+    width: 80%;
+    max-width: var(--max-section-width);
+    margin: 0 auto;
+}
+ 
+
+header .breadcrumbs{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: rgb(250, 250, 250);
+}
+
+header .breadcrumbs a{
+    text-decoration: underline;
+    color: rgb(230, 230, 230);
+    padding-right: 0.5rem;
+}
+
+header .breadcrumbs a:hover{
+    color: white;
+}
+
+header .breadcrumbs a + span{
+    color: rgb(230, 230, 230);
+}
+
+/* End of intro design */
+
+/* Contacts page */
+
+main.contacts-main .main-content{
+    width: 80%;
+    max-width: var(--max-section-width);
+    margin-inline: auto;
+    margin-bottom: var(--section-margin);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+}
+
+main.contacts-main .main-content .contacts-information div{
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+main.contacts-main .main-content .contacts-information div:last-child{
+    margin-bottom: 0;
+}
+
+main.contacts-main .main-content .contacts-information div img{
+    width: 32px;
+}
+
+main.contacts-main .main-content .contacts-information div a{
+    border-bottom: 1px solid black;
+}
+
+main.contacts-main .contact-form input{
+    border: 0;
+    background-color: rgb(225, 225, 225);
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+}
+
+main.contacts-main .contact-form .form-header input,
+main.contacts-main .contact-form form button{
+    padding: 0.5rem 2rem;
+    width: 100%;
+    max-width: 730px;
+}
+
+main.contacts-main .contact-form .form-header input:focus{
+    outline: 0; 
+    background-color: rgb(235, 235, 235);
+}
+
+
+main.contacts-main .contact-form .form-header input::placeholder{
+    color: rgb(35, 35, 35);
+}
+
+main.contacts-main .contact-form form .form-message{
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+main.contacts-main .contact-form form p{
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 1180px) {
+    main.contacts-main .main-content{
+        gap: 5rem;
+    }
+}
+
+
+@media screen and (max-width: 1050px) {
+    main.contacts-main .main-content{
+        gap: 3rem;
+    }
+}
+
+
+@media screen and (max-width: 1010px) {
+    main.contacts-main .main-content{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 500px){
+    main.contacts-main .main-content{
+        width: 90%;
+    }
+
+    main.contacts-main .main-content .contacts-information div{
+        display: grid;
+        grid-template-columns: 32px 1fr;
+        align-items: center;
+    }
+
+    main.contacts-main .main-content .contacts-information div a{
+        width: max-content; 
+    }
+}
+
+main.contacts-main .how-to-get-to-us-wrapper{
+    background-color: rgb(242,241,239);
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+
+/* End of contacts page */
+
+/* Nomera page */
+
+.breadcrumbs-wrapper{
+    background-color: #4870a1;
+    padding-block: 1rem;
+}
+
+.nomera-bc,
+.gallery-bc{
+    max-width: var(--max-section-width);
+    width: 90%;
+    margin: 0 auto;
+}
+
+main.nomera-main .nomera h1{
+    margin-block: 2rem;
+    max-width: 13ch;
+    line-height: 1;
+}
+
+main.nomera-main .nomera-swiper{
+    max-height: initial;
+}
+
+main.nomera-main .current-aktsii{
+    padding-bottom: 2rem;
+}
+
+main.nomera-main .current-aktsii h3{
+    margin-bottom: 1rem;
+}
+
+main.nomera-main .current-aktsii ul li{
+    margin-left: 2.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+main.nomera-main .current-aktsii ul li a{
+    border-bottom: 1px solid rgb(34, 34, 34);
+}
+
+main.nomera-main .current-aktsii ul li a:hover{
+    color: rgb(110, 110, 110);
+    border-bottom: 1px solid rgb(110, 110, 110);
+}
+
+main.nomera-main .current-aktsii ul li::before{
+    content: '';
+    position: absolute;
+    left: -1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+@media screen and (max-width: 500px) {
+    main.nomera-main .nomera-description{
+        font-size: 1rem;
+    }
+}
+
+/* End of nomera introduction */
+
+/* Nomera rooms and prices */
+
+.rooms-and-prices h2{
+    text-align: center;
+}
+
+.rooms-and-prices .rooms-and-prices-container{
+    max-width: var(--max-section-width);
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: var(--section-margin);
+}
+
+.rooms-and-prices .room{
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+.rooms-and-prices .room .description{
+    flex: 0 1;
+    flex-basis: 70%;
+}
+
+.rooms-and-prices .room .description h3{
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.rooms-and-prices .room .description > p{
+    margin-bottom: 2em;
+}
+
+.rooms-and-prices .room .price{
+    display: flex;
+    flex-direction: column;
+}
+
+.rooms-and-prices .room .price .highlight-price{
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.rooms-and-prices .room .price > span{
+    font-size: 0.9rem;
+}
+
+.rooms-and-prices .room .nomera-swiper{
+    width: 100%;
+    max-height: 550px;
+    aspect-ratio: 16/9;
+    order: 2;
+}
+
+.rooms-and-prices .room .nomera-swiper img{
+    border-radius: 5px;
+    height: 100%;
+}
+
+@media screen and (max-width: 965px) {
+    .rooms-and-prices .room{
+        flex-direction: column;
+    }
+
+    .rooms-and-prices .room .nomera-swiper{
+        order: 0;
+    }
+
+    .rooms-and-prices .room{
+        gap: 1.5rem;
+    }
+
+    .rooms-and-prices .room .description > p{
+        margin-bottom: 1.5rem;
+    }
+
+    .rooms-and-prices .room{
+        margin-bottom: 3rem;
+    }
+ 
+    .rooms-and-prices .room .description h3{
+        font-size: clamp(1rem, 1vw + 1rem, 1.8rem);
+    }
+}
+
+/* End of rooms and prices section */
+
+/* All included section */
+
+.all-included{
+    background-color: rgb(242,241,239);
+}
+
+.all-included-container{
+    width: 90%;
+    max-width: var(--max-section-width);
+    margin: 0 auto;
+    padding-top: 0.1rem;
+    padding-bottom: 2.1rem;
+}
+
+.all-included-container .room-amenities{
+    display: grid;
+    grid-template-columns: 250px 180px;
+    gap: 1.5rem 3rem;
+    margin-left: 1.5rem;
+}
+
+.all-included-container .room-amenities .amenity{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.all-included-container .room-amenities .amenity p{
+     font-weight: 500;
+}
+
+.free-parking{
+    padding-block: 1rem;
+    text-align: center;
+    background-color: rgb(142, 142, 142);
+    color: rgb(245, 245, 245);
+}
+
+.free-parking p{
+    width: 95%;
+    margin: 0 auto;
+} 
+
+@media screen and (max-width: 850px) {
+    .all-included .all-included-title{
+        max-width: 18ch;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .all-included-container .room-amenities{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* End of all included section */
+
+/* What to do section */
+
+.what-to-do{
+    position: relative;
+    margin-bottom: var(--section-margin);
+    padding-block: var(--section-padding);
+    color: rgb(245, 245, 245);
+    background-image: url('/nomera/photo.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    z-index: 1;
+}
+
+.what-to-do h2{
+    margin-top: 0;
+}
+
+.what-to-do::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(25, 25, 25, 0.40);
+    z-index: -1;
+}
+
+.what-to-do .what-to-do-container,
+.what-to-do h2{
+    width: 90%;
+    max-width: var(--max-section-width);
+    margin-inline: auto;
+}
+
+.what-to-do .what-to-do-container{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 5rem;
+}
+
+@media screen and (max-width: 840px) {
+    .what-to-do .what-to-do-container{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .what-to-do .what-to-do-container{
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.55;
+    }
+
+    .what-to-do::before{
+        background-color: rgba(15, 15, 15, 0.45);
+    }
+}
+
+/* End of what to do section */
+
+/* Final word section */
+
+.final-word{
+    width: 90%;
+    max-width: var(--max-section-width);
+    margin: 0 auto;
+    margin-bottom: var(--section-margin);
+}
+
+
+.final-word h4{
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    position: relative;
+    width: max-content;
+}
+
+.final-word h4::before,
+.final-word h4::after{
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background-color: var(--primary-color-drk);
+}
+
+.final-word h4::after{
+    left: initial;
+    right: -2rem;
+}
+
+.final-word p:first-of-type{
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 500px) {
+    .final-word p{
+        font-size: 1rem;
+    }
+
+    .final-word h4{
+        font-weight: 500;
+    }
+}
+
+/* End of nomera page */
+
+/* Aktsii page */
+
+.aktsii-wrapper{
+    background-color: rgb(242,241,239);
+}
+
+section.vse-aktsii{
+    width: 90%;
+    max-width: var(--max-section-width);
+    margin: 0 auto;
+    padding-block: 0.1rem;
+}
+
+section.vse-aktsii h1{
+    margin-top: 1.9rem;
+}
+
+section.vse-aktsii .aktsii-block .aktsiya{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 3rem;
+}
+
+section.vse-aktsii .aktsii-block .aktsiya .akstsiya-about{
+    padding-left: 3rem;
+    padding-right: 1rem;
+    border: 2px solid var(--primary-color);
+    border-left: 0;
+    background-color: rgb(232, 232, 232);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+section.vse-aktsii .aktsii-block .aktsiya img{
+    height: 100%;
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 70% 70%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    filter: brightness(90%);
+}
+
+section.vse-aktsii .aktsii-block .aktsiya h2{
+    font-size: clamp(1rem, 3vw + 0.5rem, 1.8rem);
+    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+section.vse-aktsii .aktsii-block .aktsiya .aktsiya-description{
+    max-width: 45ch;
+    margin-bottom: 4rem;
+}
+
+section.vse-aktsii .aktsii-block .aktsiya a{
+    display: inline-block;
+    border: 2px solid var(--primary-color-drk);
+    padding: 1rem 3rem;
+    margin-bottom: 4rem;
+}
+
+section.vse-aktsii .aktsii-block .aktsiya a:hover{
+    background-color: rgb(215, 215, 215);
+}
+
+@media screen and (max-width: 1220px) {
+    section.vse-aktsii .aktsii-block .aktsiya img{
+       max-height: 420px;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    section.vse-aktsii .aktsii-block .aktsiya img{
+       max-height: 450px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    section.vse-aktsii .aktsii-block .aktsiya img{
+       max-height: 475px;
+    }
+}
+
+@media screen and (max-width: 785px) {
+    section.vse-aktsii .aktsii-block .aktsiya img{
+       max-height: 535px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    section.vse-aktsii .aktsii-block .aktsiya{
+        grid-template-columns: 1fr;
+    }
+
+    section.vse-aktsii .aktsii-block .aktsiya .akstsiya-about{
+        border: 2px solid var(--primary-color);
+        border-top: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 5px;
+    }
+
+    section.vse-aktsii .aktsii-block .aktsiya img{
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 5px;
+        max-height: 350px;
+        aspect-ratio: 16/10;
+    }
+
+    section.vse-aktsii .aktsii-block .aktsiya .aktsiya-description{
+        margin-bottom: 2rem;
+    }
+
+    section.vse-aktsii .aktsii-block .aktsiya a{
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    section.vse-aktsii .aktsii-block .aktsiya .akstsiya-about{
+        padding-left: 1.5rem;
+    }
+
+    section.vse-aktsii .aktsii-block .aktsiya a{
+        width: 100%;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    section.vse-aktsii .aktsii-block .aktsiya:first-child h2{
+        max-width: 15ch;
+    }
+}
+
+main.aktsii-main .call-to-action-wrapper{
+    margin-bottom: 0;
+}
+
+/* End of aktsii page */
+
+/* Reviews page */
+
+main.otdyh-main .benefits h2{
+    margin-top: 0;
+}
+
+main.reviews-main .thank-you,
+main.otdyh-main .otdyh-message{
+    background-color: rgb(241, 242, 239);
+}
+
+main.reviews-main .thank-you p,
+main.otdyh-main .otdyh-message p{
+    width: 90%;
+    max-width: var(--max-section-width);
+    margin: 0 auto;
+    padding-block: 2rem;
+}
+
+.reviews-section h1,
+.reviews-section .all-reviews{
+    width: 90%;
+    max-width: var(--max-section-width);
+    margin-inline: auto;
+}
+
+.reviews-section h1{
+    margin-top: 2.5rem;
+}
+
+.reviews-section .all-reviews{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    padding-bottom: var(--section-padding);
+}
+
+.reviews-section .all-reviews .review{
+    border: 2px solid var(--primary-color-drk);
+    padding: 1.5rem;
+    border-radius: 8px;
+    height: fit-content;
+    margin-bottom: 1.5rem;
+}
+
+.reviews-section .all-reviews .review .review-content{
+    margin-bottom: 1.5rem;
+}
+
+.reviews-section .all-reviews .review .client-review-info{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+@media screen and (max-width: 1100px){
+    .reviews-section .all-reviews{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .reviews-section .all-reviews{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .reviews-section .all-reviews .review{
+        padding: 1rem;
+    }
+
+    .reviews-section .all-reviews .review .review-content{
+        margin-bottom: 1rem;
+    }
+}
+
+main.reviews-main .call-to-action-wrapper{
+    margin-bottom: 0;
+}
+
+/* End of reviews page */
+
+/* Gallery page */
+
+main.gallery-main h1,
+.photos-container,
+main.otdyh-main .activities{
+    width: 90%;
+    max-width: var(--max-section-width);
+    margin-inline: auto;
+}
+
+main.gallery-main h1,
+main.otdyh-main h1{
+    margin-top: 3rem;
+}
+
+.photos-container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+    margin-bottom: var(--section-margin);
+}
+
+.photos-container .photos{
+    position: relative;
+}
+
+.photos-container .photos.nomera-doma{
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.photos-container .photos.zavtraki{
+    grid-column-start: 5;
+    grid-column-end: 9;
+}
+
+.photos-container .photos.priroda{
+    grid-column-start: 9;
+    grid-column-end: -1;
+}
+
+.photos-container .photos.guest-house{
+    grid-column-start: 1;
+    grid-column-end: 7;
+}
+
+.photos-container .photos.zal{
+    grid-column-start: 7;
+    grid-column-end: -1;
+}
+
+.photos-container .photo-title{
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    color: rgb(245, 245, 245);
+    font-size: 1.4rem;
+    font-weight: 500;
+    pointer-events: none;
+}
+
+.photos-container .photo-title span{
+    font-size: 0.95rem;
+    font-weight: 400;
+    display: block;
+    background-color: rgb(245, 245, 245);
+    padding: 0.2rem 0.7rem;
+    border-radius: 10px;
+    color: black;
+}
+
+main.gallery-main img,
+main.otdyh-main .activity img{
+    max-height: 300px;
+    width: 100%;
+    aspect-ratio: 16/10;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: 50% 58%;
+    filter: brightness(59%);
+}
+
+@media screen and (max-width: 1000px) {
+    .photos-container .photos.nomera-doma{
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+
+    .photos-container .photos.zavtraki{
+        grid-column-start: 1;
+        grid-column-end: 7;
+    }
+
+    .photos-container .photos.priroda{
+        grid-column-start: 7;
+        grid-column-end: -1;
+    }
+
+    .photos-container .photos.guest-house{
+        grid-column-start: 1;
+        grid-column-end: 7;
+    }
+
+    .photos-container .photos.zal{
+        grid-column-start: 7;
+        grid-column-end: -1;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .photos-container .photos.priroda,
+    .photos-container .photos.zavtraki,
+    .photos-container .photos.nomera-doma,
+    .photos-container .photos.guest-house,
+    .photos-container .photos.zal{
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+
+    main.gallery-main h1{
+        margin-top: 2.5rem;
+    }
+    
+    .photos-container .photo-title{
+        bottom: 15%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .photos-container{
+        width: 100%;
+    }
+}
+
+/* End of gallery page */
+
+/* Otdyh v bahchisarae page */
+
+main.otdyh-main .activities-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: var(--section-margin);
+}
+
+main.otdyh-main .activities-container .activity{
+    position: relative;
+}
+
+main.otdyh-main .activities-container .activity p{
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    color: rgb(245, 245, 245);
+    font-size: 1.4rem;
+    font-weight: 500;
+    pointer-events: none;
+    line-height: 1.3;
+}
+
+ 
+main.otdyh-main .call-to-action-wrapper{
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 840px) {
+    main.otdyh-main .activities-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .otdyh-main .otdyh-message{
+        font-size: 1rem;
+    }
+}
+
+.dzhip-tury-main{
+    width: 90%;
+    max-width: var(--max-section-width);
+    margin: 0 auto;
+}
+
+.dzhip-tury-main .dzhip-tury-images{
+    display: flex;
+    gap: 1.5rem;
+    margin-block: 3rem;
+}
+
+.dzhip-tury-main .dzhip-tury-images img{
+    max-height: 550px;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 950px) {
+    .dzhip-tury-main .dzhip-tury-images{
+        flex-direction: column;
+    }
+}
+
+/* End of Otdyh v Bahchisarae page */
+
+/* Inner gallery page */
+
+main.gallery .gallery-section{
+    padding-top: 0.1rem;
+    background-color: rgb(237, 237, 237);
+    padding-bottom: 3rem;
+}
+
+main.gallery h1,
+main.gallery .gallery-of-photos{
+    width: 90%;
+    max-width: var(--max-section-width);
+    margin: 0 auto;
+}
+
+main.gallery h1{
+    margin-block: 3rem;
+}
+
+main.gallery .image img{
+    max-height: 400px;
+    width: 100%;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(85%);
+    border-radius: 8px;
+}
+
+main.gallery .gallery-of-photos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+
+@media screen and (max-width: 1100px) {
+    main.gallery .gallery-of-photos{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main.gallery .gallery-of-photos{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* End of gallery page */
+
+/* Inner aktsii page */
+
+.aktsiya-wrapper,
+main.birthday-celebration{
+    background-color: rgb(241, 241, 239);
+}
+
+section.aktsiya{
+    padding-block: 2rem;
+}
+
+section.aktsiya .aktsiya-description{
+    display: flex;
+    gap: 3rem;
+    width: 90%;
+    max-width: var(--max-section-width);
+    margin: 0 auto;
+}
+
+section.aktsiya .aktsiya-description h1{
+    font-size: clamp(1.3rem, 2.5vw + 0.5rem, 2.5rem);
+    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+}
+
+section.aktsiya .aktsiya-description h2{
+    font-size: clamp(1rem, 2.5vw + 0.5rem, 1.8rem);
+    margin-top: 0;
+}
+
+section.aktsiya .aktsiya-description .description h1 + p{
+    padding-bottom: 2rem;
+}
+
+section.aktsiya .get-aktsiya-info{
+    padding-top: 2rem;
+    border-top: 2px solid var(--primary-color);
+}
+
+section.aktsiya .aktsiya-description img{
+    max-width: 590px;
+    max-height: 500px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+section.aktsiya .aktsiya-description a{
+    text-decoration: underline;
+    margin-left: 0.5rem;
+}
+
+section.what-is-included,
+section.aktsiya-requrements{
+    width: 90%;
+    max-width: var(--max-section-width);
+    margin: 0 auto;
+    padding-bottom: var(--section-padding);
+}
+
+section.what-is-included h2{ 
+    font-size: clamp(1rem, 2.5vw + 0.5rem, 1.8rem);
+}
+
+section.what-is-included ul{
+    margin-left: 3rem;
+}
+
+section.what-is-included ul li{
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+section.what-is-included ul li:last-child{
+    margin-bottom: 0;
+}
+
+section.what-is-included ul li::before{
+    content: '';
+    position: absolute;
+    left: -1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+main.aktsiya-main .call-to-action-wrapper{
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 1395px) {
+    section.aktsiya .aktsiya-description h1{
+        max-width: 15ch;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    section.aktsiya .aktsiya-description h2{
+        max-width: 17ch;
+    }
+}
+
+
+@media screen and (max-width: 1070px) {
+    section.aktsiya .aktsiya-description{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    section.aktsiya .aktsiya-description h1,
+    section.aktsiya .aktsiya-description h2,
+    section.aktsiya .aktsiya-description img{
+        max-width: initial;
+    }
+
+    section.aktsiya .aktsiya-description img{
+        order: -1;
+        max-height: 400px;
+    }
+
+    section.aktsiya{
+        padding-bottom: 1rem;
+    }
+
+    section.aktsiya .aktsiya-description .get-aktsiya-info{
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    section.aktsiya .aktsiya-description h1{
+        font-size: clamp(1.1rem, 3vw + 0.5rem, 2rem);
+    }
+}
+
+@media screen and (max-width: 335px) {
+    section.aktsiya .aktsiya-description a{
+        display: block;
+    }
+}
+
+/* Birthday aktsiya page */
+
+main.birthday-celebration h1,
+main.birthday-celebration .birthday-infromation,
+main.birthday-celebration .aditional-inforamtion{
+    width: 90%;
+    max-width: var(--max-section-width);
+    margin-inline: auto;
+    margin-top: 3rem;
+}
+
+main.birthday-celebration{
+    padding-top: 0.01rem;
+}
+
+main.birthday-celebration h1{
+    margin: 0;
+    font-size: clamp(1.3rem, 2.5vw + 0.5rem, 2.5rem);
+    width: 100%;
+}
+
+main.birthday-celebration .birthday-infromation{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: var(--section-margin);
+}
+
+main.birthday-celebration .birthday-infromation img,
+.aditional-inforamtion img{
+    height: 100%;
+    max-height: 550px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(70%);
+    border-radius: 8px;
+}
+
+main.birthday-celebration .birthday-infromation .information{
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+}
+
+main.birthday-celebration .birthday-infromation .information h2{
+    margin-top: 0;
+}
+ 
+main.birthday-celebration .birthday-infromation .information p{
+    border-top: 2px solid var(--primary-color-drk);
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+main.birthday-celebration .birthday-infromation .information p:last-child{
+    margin-bottom: 0;
+}
+
+main.birthday-celebration .birthday-infromation .information p:first-of-type{
+    border-top: 0;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+    main.birthday-celebration .birthday-infromation .information{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    main.birthday-celebration .birthday-infromation img{
+        max-height: 600px;
+    }   
+}
+
+@media screen and (max-width: 1180px) {
+    main.birthday-celebration .birthday-infromation img{
+        max-height: 700px;
+    }   
+}
+
+@media screen and (max-width: 1040px) {
+    main.birthday-celebration .birthday-infromation{
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    main.birthday-celebration .birthday-infromation img{
+        max-height: 400px;
+    }
+}
+
+main.birthday-celebration .we-will-help h2{
+    font-size: clamp(1rem, 2.2vw + 0.5rem, 2rem);
+}
+
+main.birthday-celebration .we-will-help ul{
+    margin-left: 3rem;
+}
+
+main.birthday-celebration .we-will-help ul li{
+    position: relative;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+}
+
+main.birthday-celebration .we-will-help ul li:last-child{
+    margin-bottom: 0;
+}
+
+main.birthday-celebration .we-will-help ul li::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -2rem;
+    width: 15px;
+    height: 2px;
+    background-color: var(--primary-color-drk);
+}
+
+main.birthday-celebration .we-will-help h2{
+    margin-top: 3rem;
+}
+
+.aditional-inforamtion{
+    display: flex;
+    gap: 3rem;
+    padding-bottom: var(--section-padding);
+}
+
+.aditional-inforamtion .information{
+    flex: 1 1 100%;
+}
+
+@media screen and (max-width: 970px) {
+    .aditional-inforamtion{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .aditional-inforamtion img{
+        order: -1;
+        max-height: 400px;
+    }
+
+    .aditional-inforamtion .information h2{
+        margin-bottom: 1.5rem;
+    }
+}
+
+main.birthday-celebration .what-is-included h2{
+    margin-top: 0;
+}
+
+main.birthday-celebration .our-photos h2{
+    text-align: center;
+    margin-top: 0;
+}
+
+main.birthday-celebration .our-photos img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+main.birthday-celebration .our-photos{
+    padding-bottom: 3rem;
+}
+
+/* End of aktsii page */
+
+/* Inner otdyh pages */
+
+/* Ribalka na ozere page */
+
+main.ribalka-main,
+main.otdyh-na-prirode-main, 
+main.interesnie-mesta-main{
+    background-color: rgb(241, 241, 239);
+    padding-top: 0.1rem;
+}
+
+main.ribalka-main .ribalka-hero,
+main.ribalka-main .fish,
+main.ribalka-main .places-near-mangup,
+.otdyh-places{
+    max-width: var(--max-section-width);
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: var(--section-padding);
+}
+
+.otdyh-places{
+    padding-bottom: 0;
+}
+
+main.ribalka-main .ribalka-hero h1{
+    margin-top: 2.9rem;
+}
+
+main.ribalka-main .ribalka-hero p{
+    max-width: 1000px;
+}
+
+main.ribalka-main .fish .images-of-fish{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+main.ribalka-main .fish .images-of-fish img,
+main.ribalka-main .places-near-mangup img{
+     height: 100%;
+     aspect-ratio: 16/12;
+     object-fit: cover;
+     object-position: center center;
+     border-radius: 8px;
+}
+
+main.ribalka-main section h2{
+    margin-top: 0;
+}
+
+@media screen and (max-width: 805px) {
+    main.ribalka-main .fish h2{
+        max-width: 18ch;
+    }
+
+    main.ribalka-main .fish .images-of-fish{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    main.ribalka-main .fish .images-of-fish{
+        grid-template-columns: 1fr;
+    }
+}
+
+main.ribalka-main .places-near-mangup p{
+    margin-bottom: 2rem;
+}
+
+main.ribalka-main .places-near-mangup img{
+    max-height: 550px;
+    width: 100%;
+}
+
+/* End of ribalka page */
+
+/* Priroda page */
+
+main.otdyh-na-prirode-main .otdyh-hero{
+    display: flex;
+    gap: 1.5rem;
+    width: 90%;
+    max-width: var(--max-section-width);
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: var(--section-padding);
+}
+
+main.otdyh-na-prirode-main .otdyh-hero h1{
+    width: 100%;
+    font-size: clamp(1.3rem, 3vw + 0.55rem, 2.5rem);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+main.otdyh-na-prirode-main .otdyh-hero img{
+    max-height: 550px;
+    width: 50%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 1399px) {
+    main.otdyh-na-prirode-main .otdyh-hero h1{
+        max-width: 16ch;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    main.otdyh-na-prirode-main .otdyh-hero{
+        flex-direction: column;
+    }
+
+    main.otdyh-na-prirode-main .otdyh-hero h1{
+        max-width: 100%;
+    }
+
+    main.otdyh-na-prirode-main .otdyh-hero img{
+        width: 100%;
+        max-height: 500px;
+    }
+}
+
+main.otdyh-na-prirode-main .otdyh-places h2{
+    margin-top: 1rem;
+    font-size: clamp(1.15rem, 2.7vw + 0.55rem, 1.8rem);
+}
+ 
+main.otdyh-na-prirode-main .otdyh-places .place img{
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+main.otdyh-na-prirode-main .otdyh-places .place{
+    padding-bottom: var(--section-padding);
+}
+
+main.otdyh-na-prirode-main .otdyh-places .place h3{
+    margin-top: 0;
+    font-size: clamp(1.15rem, 2vw + 0.55rem, 1.8rem);
+    font-weight: 500;
+}
+
+main.otdyh-na-prirode-main .otdyh-places .place.chufyt-kale h3{
+    margin-top: 2rem;
+}
+
+main.otdyh-na-prirode-main .otdyh-places .place p{
+    max-width: 85ch;
+}
+
+main.otdyh-na-prirode-main .otdyh-final-word{
+    position: relative;
+    max-width: initial;
+    width: 100%;
+    padding-block: 5rem;
+    color: rgb(245, 245, 245);
+    z-index: 1;
+}
+
+main.otdyh-na-prirode-main .otdyh-final-word::before{
+    content: "";
+    position: absolute;
+    inset: 0;  
+    background-image: url('/otdyh-v-bakhchisarae/priroda/lavender-field.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(59%);
+    z-index: -1;
+}
+
+main.otdyh-na-prirode-main .otdyh-final-word .final-word-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1050px) {
+    main.otdyh-na-prirode-main .otdyh-final-word .final-word-content{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    main.otdyh-na-prirode-main{
+        font-size: 1rem;
+    }
+}
+
+/* End of otdyh na prirode page */
+
+/* Interesnie mesta page*/
+
+main.interesnie-mesta-main h1,
+main.interesnie-mesta-main .mesto,
+main.interesnie-mesta-main .mesta-final-word{
+    width: 90%;
+    max-width: var(--max-section-width);
+    margin-inline: auto;
+}
+
+main.interesnie-mesta-main h1{
+    margin-top: 3rem;
+    font-size: clamp(1.3rem, 4vw + 0.7rem, 2.5rem);
+}
+
+main.interesnie-mesta-main .mesto{
+    padding-bottom: var(--section-padding);
+}
+
+main.interesnie-mesta-main .mesto h2{
+    font-size: clamp(1.3rem, 3vw + 0.55rem, 2.2rem);
+}
+
+main.interesnie-mesta-main .mesto img{
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(85%);
+}
+
+main.interesnie-mesta-main .mesto .mesto-image-caption{
+    font-size: 14px;
+    line-height: 17px;
+    color: #3c3c3c;
+    padding-top: 0.5rem;
+}
+
+main.interesnie-mesta-main .mesto .mesto-description{
+    max-width: 90ch;
+}
+
+main.interesnie-mesta-main .mesto .mesto-image-caption a{
+    text-decoration: underline;
+}
+
+main.interesnie-mesta-main .mesto.park-miniatur h2{
+    margin-top: 1rem;
+}
+
+main.interesnie-mesta-main .mesto ul.things-to-see li,
+main.interesnie-mesta-main .mesto .mesto-cost li{
+    position: relative;
+    margin-left: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+main.interesnie-mesta-main .mesto ul.things-to-see p{
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+}
+
+main.interesnie-mesta-main .mesto ul.things-to-see li::before,
+main.interesnie-mesta-main .mesto .mesto-cost li::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -2rem;
+    width: 15px;
+    height: 2px;
+    background-color: var(--primary-color-drk);
+}
+ 
+main.interesnie-mesta-main .mesta-final-word{
+    width: 90%;
+    max-width: var(--max-section-width);
+    margin: 0 auto;
+    padding-bottom: var(--section-margin);
+}
+
+main.interesnie-mesta-main .mesta-final-word p:first-child{
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 550px) {
+    main.interesnie-mesta-main{
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гостевые дома на базе отдыха "Станица"</title>
+    <meta name="description" content="В наших домиках вы можете хорошо отдохнуть как с семьёй с детьми, так и с друзьями. Среди красивая природа, лес, живописное озеро. На базе отдыха есть кафе, беседки, волейбольная и детская площадка.">
+    <meta property="og:title" content='Гостевые дома на базе отдыха "Станица"'>
+    <meta property="og:description" content="В наших домиках вы можете хорошо отдохнуть как с семьёй с детьми, так и с друзьями. Среди красивая природа, лес, живописное озеро. На базе отдыха есть кафе, беседки, волейбольная и детская площадка.">
+    <meta property="og:image" content="main-images/main-image.jpg">
+    <meta property="og:url" content="https://stanica73.ru">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="svg-images/logo.jpg" type="image/x-icon">
+    <script src="script.js" defer></script>
+    <script src="gallery.js" defer></script>
+    <script src="ymaps.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+    <header class="domiki-header">
+        <nav>
+            <div class="nav-container">
+                <a class="phone-logo" href="/"><img src="svg-images/logo.jpg" alt=""></a>
+                <div class="hamburger-menu">
+                    <span class="menu-item"></span>
+                    <span class="menu-item"></span>
+                    <span class="menu-item"></span>
+                </div>
+                <ul class="navigation">
+                    <a class="logo" href="/"><img src="svg-images/logo.jpg" alt=""></a>
+                    <div class="nav-sections">
+                        <li><a href="index.html#besedki">Беседки</a></li>
+                        <li><a href="index.html#aktsii">Акции</a></li>
+                        <li><a href="index.html#banya">Баня</a></li>
+                        <li><a href="index.html#kafe">Кафе</a></li>
+                        <li><a href="#otzivi">Отзывы</a></li>
+                    </div>
+                    <div class="nav-contacts">
+                        <p><a class="phone-number" href="tel: +79278010888">+7 (927) 801-08-88</a></p>
+                        <div class="nav-social">
+                            <a href="https://www.instagram.com/ikpo_stanica/?hl=ru"><img src="svg-images/instagram.svg" alt=""></a>
+                            <a href="https://vk.com/baza_stanica73"><img src="svg-images/vk.svg" alt=""></a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="domiki-main">
+        <h1>Гостевые дома в Ульяновске</h1>
+        <section class="domiki-about section">
+            <div class="domiki-description">
+                <h2>О гостевых домах</h2>
+                <p>
+                    В наших домиках вы можете хорошо отдохнуть как с семьёй с детьми, так и с друзьями. 
+                    Домики находятся в дали от города, среди природы. Рядом лес с восхительной тропинкой среди деревьев и 
+                    живописное озеро, где можно покупаться и половить рыбу. Так что спокойно отдохните в дали от городского шума
+                    и насладитесь пением птиц и красивой природой. 
+                </p>
+                <p>
+                    Домики рассчитаны на проживание от 1 до 9 человек. Заезд после 14 и выезд до 12 часов.
+                    Проживание с животными на базе отдыха запрещено. При бронировании домика предоплата 50%.  
+                </p>
+            </div>
+            <img src="main-images/domiki.jpg" alt="">
+        </section>
+        <section class="domiki section">
+            <div class="domiki__wrapper">
+                <div class="domik">
+                    <div class="domik-swiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="dom1/domik.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>
+                
+                            <div class="swiper-slide">
+                                <img src="dom1/domik-2.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>
+                        
+                            <div class="swiper-slide">
+                                <img src="dom1/domik-3.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>    
+                            
+                            <div class="swiper-slide">
+                                <img src="dom1/domik-4.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>     
+
+                            <div class="swiper-slide">
+                                <img src="dom1/domik-5.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>                             
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+
+                    <div class="domik__description">
+                        <h3>Домик 1</h3>
+
+                        <div class="domik__info">
+                            <div class="info-main">
+                                <div class="room-space">
+                                    <img src="svg-images/room-size.png" alt="">
+                                    <p>40 кв.м.</p>
+                                </div>
+                                <div class="room-descriptive-images">
+                                    <span class="tooltip" data-tooltip="Веранда"><img src="svg-images/veranda.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Вентилятор"><img src="svg-images/fan.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Постельное бельё"><img src="svg-images/blanket.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Столик"><img src="svg-images/table.png" alt=""></span>
+                                </div>
+                            </div>
+                        </div>
+ 
+                        <div class="domik-info-wrapper">
+                            <div class="domik__mesta">
+                                <p>Количество мест:</p>
+                                <p>2 основных места</p>
+                                <p>(+ 2 дополнительных)</p>
+                            </div>
+    
+                            <div class="domik__price">
+                                <div class="workdays">
+                                    <p>4 500₽</p>
+                                    <span class="for-one-night">с пн-чт</span>
+                                </div>
+                                <div class="weekdays">
+                                    <p>5000₽</p>
+                                    <span class="for-one-night">с пт-вс</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="domik">
+                    <div class="domik-swiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="dom2/domik.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>
+                
+                            <div class="swiper-slide">
+                                <img src="dom2/domik-2.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>
+                        
+                            <div class="swiper-slide">
+                                <img src="dom2/domik-3.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>    
+                            
+                            <div class="swiper-slide">
+                                <img src="dom2/domik-4.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>     
+
+                            <div class="swiper-slide">
+                                <img src="dom2/domik-5.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>                             
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+
+                    <div class="domik__description">
+                        <h3>Домик 2</h3>
+
+                        <div class="domik__info">
+                            <div class="info-main">
+                                <div class="room-space">
+                                    <img src="svg-images/room-size.png" alt="">
+                                    <p>40 кв.м.</p>
+                                </div>
+                                <div class="room-descriptive-images">
+                                    <span class="tooltip" data-tooltip="Веранда"><img src="svg-images/veranda.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Вентилятор"><img src="svg-images/fan.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Постельное бельё"><img src="svg-images/blanket.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Мангал"><img src="svg-images/mangal.png" alt=""></span>
+                                </div>
+                            </div>
+                        </div>
+ 
+                        <div class="domik-info-wrapper">
+                            <div class="domik__mesta">
+                                <p>Количество мест:</p>
+                                <p>2 основных места</p>
+                                <p>(+ 2 дополнительных)</p>
+                            </div>
+    
+                            <div class="domik__price">
+                                <div class="workdays">
+                                    <p>4 500₽</p>
+                                    <span class="for-one-night">с пн-чт</span>
+                                </div>
+                                <div class="weekdays">
+                                    <p>5000₽</p>
+                                    <span class="for-one-night">с пт-вс</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="domik">
+                    <div class="domik-swiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="dom3/domik.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>
+                
+                            <div class="swiper-slide">
+                                <img src="dom3/domik-2.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>
+                        
+                            <div class="swiper-slide">
+                                <img src="dom3/domik-3.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>    
+                            
+                            <div class="swiper-slide">
+                                <img src="dom3/domik-4.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>     
+
+                            <div class="swiper-slide">
+                                <img src="dom3/domik-5.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>                             
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+
+                    <div class="domik__description">
+                        <h3>Домик 3</h3>
+
+                        <div class="domik__info">
+                            <div class="info-main">
+                                <div class="room-space">
+                                    <img src="svg-images/room-size.png" alt="">
+                                    <p>40 кв.м.</p>
+                                </div>
+                                <div class="room-descriptive-images">
+                                    <span class="tooltip" data-tooltip="Веранда"><img src="svg-images/veranda.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Вентилятор"><img src="svg-images/fan.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Постельное бельё"><img src="svg-images/blanket.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Мангал"><img src="svg-images/mangal.png" alt=""></span>
+                                </div>
+                            </div>
+                        </div>
+ 
+                        <div class="domik-info-wrapper">
+                            <div class="domik__mesta">
+                                <p>Количество мест:</p>
+                                <p>2 места</p>
+                            </div>
+    
+                            <div class="domik__price">
+                                <div class="workdays">
+                                    <p>3 600₽</p>
+                                    <span class="for-one-night">с пн-чт</span>
+                                </div>
+                                <div class="weekdays">
+                                    <p>3800₽</p>
+                                    <span class="for-one-night">с пт-вс</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="domik">
+                    <div class="domik-swiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="dom4/domik.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>
+                
+                            <div class="swiper-slide">
+                                <img src="dom4/domik-2.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>
+                        
+                            <div class="swiper-slide">
+                                <img src="dom4/domik-3.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>    
+                            
+                            <div class="swiper-slide">
+                                <img src="dom4/domik-4.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>     
+
+                            <div class="swiper-slide">
+                                <img src="dom4/domik-5.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>                             
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+
+                    <div class="domik__description">
+                        <h3>Домик 4</h3>
+
+                        <div class="domik__info">
+                            <div class="info-main">
+                                <div class="room-space">
+                                    <img src="svg-images/room-size.png" alt="">
+                                    <p>40 кв.м.</p>
+                                </div>
+                                <div class="room-descriptive-images">
+                                    <span class="tooltip" data-tooltip="Веранда"><img src="svg-images/veranda.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Вентилятор"><img src="svg-images/fan.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Постельное бельё"><img src="svg-images/blanket.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Мангал"><img src="svg-images/mangal.png" alt=""></span>
+                                </div>
+                            </div>
+                        </div>
+ 
+                        <div class="domik-info-wrapper">
+                            <div class="domik__mesta">
+                                <p>Количество мест:</p>
+                                <p>2 основных места</p>
+                                <p>(+ 2 дополнительных)</p>
+                            </div>
+    
+                            <div class="domik__price">
+                                <div class="workdays">
+                                    <p>4 500₽</p>
+                                    <span class="for-one-night">с пн-чт</span>
+                                </div>
+                                <div class="weekdays">
+                                    <p>5000₽</p>
+                                    <span class="for-one-night">с пт-вс</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="domik">
+                    <div class="domik-swiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="dom7/domik.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>
+                
+                            <div class="swiper-slide">
+                                <img src="dom7/domik-2.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>
+                        
+                            <div class="swiper-slide">
+                                <img src="dom7/domik-3.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>    
+                            
+                            <div class="swiper-slide">
+                                <img src="dom7/domik-4.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>     
+
+                            <div class="swiper-slide">
+                                <img src="dom7/domik-5.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>                             
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+
+                    <div class="domik__description">
+                        <h3>Домик 7</h3>
+
+                        <div class="domik__info">
+                            <div class="info-main">
+                                <div class="room-space">
+                                    <img src="svg-images/room-size.png" alt="">
+                                    <p>40 кв.м.</p>
+                                </div>
+                                <div class="room-descriptive-images">
+                                    <span class="tooltip" data-tooltip="Веранда"><img src="svg-images/veranda.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Вентилятор"><img src="svg-images/fan.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Постельное бельё"><img src="svg-images/blanket.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Мангал"><img src="svg-images/mangal.png" alt=""></span>
+                                </div>
+                            </div>
+                        </div>
+ 
+                        <div class="domik-info-wrapper">
+                            <div class="domik__mesta">
+                                <p>Количество мест:</p>
+                                <p>7 основных + 2 доп.</p>
+                                <p>(+ беседка на 20 чел.)</p>
+                            </div>
+    
+                            <div class="domik__price">
+                                <div class="workdays">
+                                    <p>8 500₽</p>
+                                    <span class="for-one-night">с пн-чт</span>
+                                </div>
+                                <div class="weekdays">
+                                    <p>9 500₽</p>
+                                    <span class="for-one-night">с пт-вс</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="domik">
+                    <div class="domik-swiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="dom10/domik.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>
+                
+                            <div class="swiper-slide">
+                                <img src="dom10/domik-2.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>
+                        
+                            <div class="swiper-slide">
+                                <img src="dom10/domik-3.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>    
+                            
+                            <div class="swiper-slide">
+                                <img src="dom10/domik-4.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>     
+
+                            <div class="swiper-slide">
+                                <img src="dom10/domik-5.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>                             
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+
+                    <div class="domik__description">
+                        <h3>Домик 10</h3>
+
+                        <div class="domik__info">
+                            <div class="info-main">
+                                <div class="room-space">
+                                    <img src="svg-images/room-size.png" alt="">
+                                    <p>40 кв.м.</p>
+                                </div>
+                                <div class="room-descriptive-images">
+                                    <span class="tooltip" data-tooltip="Веранда"><img src="svg-images/veranda.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Вентилятор"><img src="svg-images/fan.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Постельное бельё"><img src="svg-images/blanket.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Мангал"><img src="svg-images/mangal.png" alt=""></span>
+                                </div>
+                            </div>
+                        </div>
+ 
+                        <div class="domik-info-wrapper">
+                            <div class="domik__mesta">
+                                <p>Количество мест:</p>
+                                <p>7 основных места</p>
+                                <p>(+ 2 дополнительных)</p>
+                            </div>
+    
+                            <div class="domik__price">
+                                <div class="workdays">
+                                    <p>5000₽</p>
+                                    <span class="for-one-night">с пн-чт</span>
+                                </div>
+                                <div class="weekdays">
+                                    <p>5 500₽</p>
+                                    <span class="for-one-night">с пт-вс</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="domik">
+                    <div class="domik-swiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="dom11/domik.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>
+                
+                            <div class="swiper-slide">
+                                <img src="dom11/domik-2.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>
+                        
+                            <div class="swiper-slide">
+                                <img src="dom10/domik-3.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>    
+                            
+                            <div class="swiper-slide">
+                                <img src="dom11/domik-4.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>     
+
+                            <div class="swiper-slide">
+                                <img src="dom11/domik-5.jpg" alt="вид на реку Шуя с гостевого дома">
+                            </div>                             
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+
+                    <div class="domik__description">
+                        <h3>Домик 11</h3>
+
+                        <div class="domik__info">
+                            <div class="info-main">
+                                <div class="room-space">
+                                    <img src="svg-images/room-size.png" alt="">
+                                    <p>40 кв.м.</p>
+                                </div>
+                                <div class="room-descriptive-images">
+                                    <span class="tooltip" data-tooltip="Веранда"><img src="svg-images/veranda.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Вентилятор"><img src="svg-images/fan.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Постельное бельё"><img src="svg-images/blanket.png" alt=""></span>
+                                    <span class="tooltip" data-tooltip="Мангал"><img src="svg-images/mangal.png" alt=""></span>
+                                </div>
+                            </div>
+                        </div>
+ 
+                        <div class="domik-info-wrapper">
+                            <div class="domik__mesta">
+                                <p>Количество мест:</p>
+                                <p>4 основных места</p>
+                                <p>(+ 2 дополнительных)</p>
+                            </div>
+    
+                            <div class="domik__price">
+                                <div class="workdays">
+                                    <p>5000₽</p>
+                                    <span class="for-one-night">с пн-чт</span>
+                                </div>
+                                <div class="weekdays">
+                                    <p>5 500₽</p>
+                                    <span class="for-one-night">с пт-вс</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews section" id="otzivi">
+            <div class="reviews__header">
+                <h2>Отзывы</h2>
+                <a href="https://yandex.ru/maps/org/stanitsa/84773575914/reviews/?ll=48.354155%2C54.497358&z=17" target="_blank">
+                    <img class="yandex-rating" src="svg-images/yandex-rating.svg" alt="">
+                </a>
+
+                <div class="swiper reviews-swiper">
+
+                    <div class="swiper-wrapper">
+
+                        <div class="review swiper-slide">
+
+                            <div class="review__header">
+                                <img src="svg-images/review-image5.webp" alt="">
+                                <div class="person-info">
+                                    <p class="client-name">Алексей</p>
+                                    <p class="client-text">Знаток города 19 уровня</p>
+                                </div>
+                            </div>
+
+                            <div class="review--content">
+                                <div class="ranking">
+                                    <img src="svg-images/star.svg" alt="">
+                                    <img src="svg-images/star.svg" alt="">
+                                    <img src="svg-images/star.svg" alt="">
+                                    <img src="svg-images/star.svg" alt="">
+                                    <img src="svg-images/star.svg" alt="">
+                                </div>
+                                <p class="text">
+                                    "Отличное место для спокойного отдыха. Уютные домики, жаркая баня, красивая природа и простор. Если хочется расслабиться вдали от шума и города за более чем демократичную стоимость - однозначно советую посетить. По сервису и отношению к гостям - нареканий нет, все вежливо, быстро, корректно." 
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="review swiper-slide">
+
+                            <div class="review__header">
+                                <img src="svg-images/review-image2.webp" alt="">
+                                <div class="person-info">
+                                    <p class="client-name">Александр Казаков</p>
+                                    <p class="client-text">Знаток города 13 уровня</p>
+                                </div>
+                            </div>
+
+                            <div class="review--content">
+                                <div class="ranking">
+                                    <img src="svg-images/star.svg" alt="">
+                                    <img src="svg-images/star.svg" alt="">
+                                    <img src="svg-images/star.svg" alt="">
+                                    <img src="svg-images/star.svg" alt="">
+                                    <img src="svg-images/star.svg" alt="">
+                                </div>
+                                <p class="text">
+                                    "Красиво, уютно. Есть место для купания, всё чисто и в порядке, идёт развитие. База отдыха новая. Получили только положительные впечатления." 
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="review swiper-slide">
+
+                            <div class="review__header">
+                                <img src="svg-images/review-image3.webp" alt="">
+                                <div class="person-info">
+                                    <p class="client-name">Наталия</p>
+                                    <p class="client-text">Знаток города 12 уровня</p>
+                                </div>
+                            </div>
+
+                            <div class="review--content">
+                                <div class="ranking">
+                                    <img src="svg-images/star.svg" alt="">
+                                    <img src="svg-images/star.svg" alt="">
+                                    <img src="svg-images/star.svg" alt="">
+                                    <img src="svg-images/star.svg" alt="">
+                                    <img src="svg-images/star.svg" alt="">
+                                </div>
+                                <p class="text">
+                                    "Интересное место с хорошим антуражем и приятным пространством!!!" 
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="review swiper-slide">
+
+                            <div class="review__header">
+                                <img src="svg-images/review-image4.webp" alt="">
+                                <div class="person-info">
+                                    <p class="client-name">Сергей Исаков</p>
+                                    <p class="client-text">Знаток города 4 уровня</p>
+                                </div>
+                            </div>
+
+                            <div class="review--content">
+                                <div class="ranking">
+                                    <img src="svg-images/star.svg" alt="">
+                                    <img src="svg-images/star.svg" alt="">
+                                    <img src="svg-images/star.svg" alt="">
+                                    <img src="svg-images/star.svg" alt="">
+                                    <img src="svg-images/star.svg" alt="">
+                                </div>
+                                <p class="text">
+                                    "Внезапно решили выбраться на выходные с семьёй подышать воздухом за городом. Открыл Авито и нашел этот вариант. Арендовали небольшой двухэтажный домик, номер 4. Есть все необходимое для жизни. Отдыхом остались довольны, с удовольствием вернёмся ещё!" 
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="review swiper-slide">
+
+                            <div class="review__header">
+                                <img src="svg-images/review-image.webp" alt="">
+                                <div class="person-info">
+                                    <p class="client-name">Михаил</p>
+                                    <p class="client-text">Знаток города 10 уровня</p>
+                                </div>
+                            </div>
+
+                            <div class="review--content">
+                                <div class="ranking">
+                                    <img src="svg-images/star.svg" alt="">
+                                    <img src="svg-images/star.svg" alt="">
+                                    <img src="svg-images/star.svg" alt="">
+                                    <img src="svg-images/star.svg" alt="">
+                                    <img src="svg-images/star.svg" alt="">
+                                </div>
+                                <p class="text">
+                                    "Весьма доброе, прекрасное, красивейшее место, очень рад что побывал там, 
+                                    тем более, что участвовал в соревнованиях по рубке шашкой 'Казарла'" 
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="domiki-contacts section">
+            <div class="contacts-information">
+                <h2>Контакты</h2>
+                <p class="contacts-text">Приезжайте на базу отдыха Станица! Отдохните в уютных гостевых домах, сходите в баню, пожарьте шашлыки, наловите рыбы и активно проведите время всей семьёй.</p>
+                <p class="contacts-phone"><span class="bold">Телефон</span>: <a href="tel: +79278010888">+7 (927) 801-08-88</a></p>
+                <p class="contacts-location"><span class="bold">Адрес</span>: Ульяновский район, Ишеевское городское поселение, село Новая Беденьга</p>
+                <p><span class="bold">Время заезда</span>: c 14 дня до 12 ночи</p>
+            </div>
+            <div class="contacts-map" id="yandex-map"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer__main">
+            <div class="footer-message">
+                <img class="logo" src="svg-images/logo.jpg" alt="">
+                <p>Мы делаем всё, чтобы ваш отдых в Ульяновске был незабываемым.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/ikpo_stanica/?hl=ru" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="54" height="54" viewBox="0,0,256,256"><g fill="#a6834a" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(4,4)"><path d="M21.58008,7c-8.039,0 -14.58008,6.54494 -14.58008,14.58594v20.83203c0,8.04 6.54494,14.58203 14.58594,14.58203h20.83203c8.04,0 14.58203,-6.54494 14.58203,-14.58594v-20.83398c0,-8.039 -6.54494,-14.58008 -14.58594,-14.58008zM47,15c1.104,0 2,0.896 2,2c0,1.104 -0.896,2 -2,2c-1.104,0 -2,-0.896 -2,-2c0,-1.104 0.896,-2 2,-2zM32,19c7.17,0 13,5.83 13,13c0,7.17 -5.831,13 -13,13c-7.17,0 -13,-5.831 -13,-13c0,-7.169 5.83,-13 13,-13zM32,23c-4.971,0 -9,4.029 -9,9c0,4.971 4.029,9 9,9c4.971,0 9,-4.029 9,-9c0,-4.971 -4.029,-9 -9,-9z"></path></g></g></svg></a>
+                    <a href="https://vk.com/baza_stanica73" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,256"><g fill="#a6834a" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M41,4h-32c-2.76,0 -5,2.24 -5,5v32c0,2.76 2.24,5 5,5h32c2.76,0 5,-2.24 5,-5v-32c0,-2.76 -2.24,-5 -5,-5zM37.72,33l-3.73,-0.01c0,0 -0.08,0.01 -0.21,0.01c-0.3,0 -0.92,-0.08 -1.65,-0.58c-1.31,-0.91 -2.56,-3.17 -3.55,-3.17c-0.07,0 -0.13,0.01 -0.19,0.03c-0.86,0.27 -1.12,1.13 -1.12,2.18c0,0.37 -0.26,0.54 -0.96,0.54h-1.93c-2.16,0 -4.25,-0.05 -6.6,-2.62c-3.46,-3.79 -6.7,-10.53 -6.7,-10.53c0,0 -0.18,-0.39 0.01,-0.62c0.18,-0.21 0.6,-0.23 0.76,-0.23c0.04,0 0.06,0 0.06,0h4c0,0 0.37,0.07 0.64,0.27c0.23,0.17 0.35,0.48 0.35,0.48c0,0 0.68,1.32 1.53,2.81c1.43,2.46 2.2,3.28 2.75,3.28c0.09,0 0.18,-0.02 0.27,-0.07c0.82,-0.45 0.58,-4.09 0.58,-4.09c0,0 0.01,-1.32 -0.42,-1.9c-0.33,-0.46 -0.96,-0.59 -1.24,-0.63c-0.22,-0.03 0.14,-0.55 0.62,-0.79c0.62,-0.3 1.65,-0.36 2.89,-0.36h0.6c1.17,0.02 1.2,0.14 1.66,0.25c1.38,0.33 0.91,1.62 0.91,4.71c0,0.99 -0.18,2.38 0.53,2.85c0.05,0.03 0.12,0.05 0.21,0.05c0.46,0 1.45,-0.59 3.03,-3.26c0.88,-1.52 1.56,-3.03 1.56,-3.03c0,0 0.15,-0.27 0.38,-0.41c0.22,-0.13 0.22,-0.13 0.51,-0.13h0.03c0.32,0 3.5,-0.03 4.2,-0.03h0.08c0.67,0 1.28,0.01 1.39,0.42c0.16,0.62 -0.49,1.73 -2.2,4.03c-2.82,3.77 -3.14,3.49 -0.8,5.67c2.24,2.08 2.7,3.09 2.78,3.22c0.93,1.54 -1.03,1.66 -1.03,1.66z"></path></g></g></svg></a>
+                </div>
+            </div>
+            <div class="footer-pages">
+                <h2>О базе отдыха</h2>
+                <ul>
+                    <li><a href="/index.html">Главная</a></li>
+                    <li><a href="/#besedki">Беседки</a></li>
+                    <li><a href="/#aktsii">Акции</a></li>
+                    <li><a href="/#banya">Баня</a></li>
+                    <li><a href="/#kafe">Кафе</a></li>
+                </ul>
+            </div>
+            <div class="footer-contacts">
+                <h2>Контакты</h2>
+                <div class="contacts-phone">
+                    <img src="svg-images/footer-phone.svg" alt="">
+                    <a href="tel: +79278010888">+7 (927) 801-08-88</a>
+                </div>
+                <div class="contacts-whatsup">
+                    <a class="whatsup" href="https://wa.me/+79278010888" target="_blank">Написать в WhatsApp</a>
+                </div>
+                <div class="contacts-location">
+                    <img src="svg-images/footer-location.png" alt="">
+                    <p>Ульяновский район, село Новая Беденьга</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© База отдыха Станица. Все права защищены. | Создание сайта - <a href="https://original-websites.ru">Original Websites</a></p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=7953d849-3712-458e-912c-5a6a5aa2c38a&lang=ru_RU" type="text/javascript"></script>
+</body>
+</html>
